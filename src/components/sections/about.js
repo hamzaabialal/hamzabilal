@@ -21,12 +21,16 @@ const StyledAboutSection = styled.section`
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-template-columns: repeat(3, minmax(140px, 200px));
     grid-gap: 0 10px;
     padding: 0;
     margin: 20px 0 0 0;
     overflow: hidden;
     list-style: none;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+    }
 
     li {
       position: relative;
@@ -125,7 +129,19 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'Django', 'FastAPI', 'Flask', 'Pytest', 'SQL', 'JavaScript', 'Git', 'Docker', 'Machine Learning', 'REST APIs', 'Celery', 'Redis'];
+  const skills = [
+    // Backend Technologies
+    'Python', 'Django', 'Django REST Framework', 'FastAPI', 'Flask', 
+    'REST APIs', 'Celery', 'Redis', 'Pytest', 'SQL',
+    
+    // AI/ML Technologies
+    'Machine Learning', 'Hugging Face', 'OpenAI', 'Whisper', 'AWS SageMaker', 
+    'AWS Comprehend', 'Text Analysis', 'Video Analysis', 'Image Analysis',
+    
+    // Development Tools & Cloud
+    'JavaScript', 'Git', 'Docker', 'AI Agents', 'Agno', 'Apify', 
+    'Social Media Scraping'
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,22 +151,37 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Hamza Bilal and I'm a passionate Python Developer specializing in backend development. 
-              My interest in programming started during my studies in Data Science, where I discovered the power of 
-              Python for building robust and scalable applications.
+              Hello! My name is Hamza Bilal and I'm a passionate Full-Stack Developer and AI/ML Engineer specializing in 
+              backend development, machine learning, and AI-powered applications. My journey in programming began during 
+              my studies in Data Science, where I discovered the incredible potential of Python for building robust, 
+              scalable applications and intelligent systems.
             </p>
 
             <p>
-              I specialize in backend development with expertise in Django, FastAPI, Flask, and pytest. I'm proficient 
-              in SQL databases and adept at using GitLab/GitHub for version control and unit testing in Django. 
-              I've contributed significantly to various projects by enhancing outcomes through effective code management 
-              and collaboration tools.
+              I specialize in backend development with extensive expertise in Django, Django REST Framework, FastAPI, 
+              and Flask. My experience spans across building RESTful APIs, implementing OAuth flows, and creating 
+              modular architecture patterns. I'm proficient in SQL databases, Git version control, and comprehensive 
+              testing with pytest, ensuring high-quality, maintainable code.
+            </p>
+
+            <p>
+              My passion lies in the intersection of AI and web development. I have extensive experience working with 
+              Hugging Face models for text analysis, video analysis, and image analysis projects. I've built AI agents 
+              for transcript generation using Agno and OpenAI, and implemented Whisper models for video transcription 
+              and analysis. My work includes deploying custom ML models on AWS SageMaker and utilizing AWS Comprehend 
+              for advanced text analysis.
+            </p>
+
+            <p>
+              I've also worked on data scraping projects, extracting valuable insights from social media platforms using 
+              Apify and other advanced techniques. These projects involved comprehensive text and video analysis, 
+              leveraging ML models to derive meaningful patterns and trends from large datasets.
             </p>
 
             <p>
               Currently, I'm working as a Backend Developer at Distack Solutions, where I develop and maintain scalable 
               backend services using Python, Django, and Django Rest Framework. I'm passionate about driving innovation 
-              and continuously improving development processes.
+              through AI integration and continuously improving development processes with cutting-edge technologies.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
