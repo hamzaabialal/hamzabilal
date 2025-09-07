@@ -5,7 +5,7 @@ module.exports = {
     title: 'Hamza Bilal',
     description:
       'Backend Python Developer specializing in Django, FastAPI, and scalable API-driven solutions with a strong focus on clean architecture, automation, and performance optimization.',
-    siteUrl: 'https://www.linkedin.com/in/hamza-bilal-600968245/', // No trailing slash allowed!
+    siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
