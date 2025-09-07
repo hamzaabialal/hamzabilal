@@ -65,10 +65,14 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I'm a Python Developer specializing in backend development with expertise in Django, FastAPI, 
-        Flask, and pytest. Currently, I'm focused on building scalable backend services and APIs
-        at{' '}
-        <a href="https://www.linkedin.com/in/hamza-bilal-600968245/" target="_blank" rel="noreferrer">
+        I'm a Python Developer specializing in backend development with expertise in Django,
+        FastAPI, Flask, and pytest. I also build AI agents and production ML services, deploying
+        models on AWS (e.g., SageMaker and Comprehend) and integrating them into APIs. Currently,
+        I'm focused on building scalable backend and AI-driven APIs at{' '}
+        <a
+          href="https://www.linkedin.com/in/hamza-bilal-600968245/"
+          target="_blank"
+          rel="noreferrer">
           Distack Solutions
         </a>
         .
@@ -76,11 +80,7 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a
-      className="email-link"
-      href="mailto:hamzaabialal@gmail.com"
-      target="_blank"
-      rel="noreferrer">
+    <a className="email-link" href="mailto:hamzaabialal@gmail.com" target="_blank" rel="noreferrer">
       Get In Touch
     </a>
   );

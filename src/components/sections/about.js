@@ -131,16 +131,36 @@ const About = () => {
 
   const skills = [
     // Backend Technologies
-    'Python', 'Django', 'Django REST Framework', 'FastAPI', 'Flask', 
-    'REST APIs', 'Celery', 'Redis', 'Pytest', 'SQL',
-    
+    'Python',
+    'Django',
+    'Django REST Framework',
+    'FastAPI',
+    'Flask',
+    'REST APIs',
+    'Celery',
+    'Redis',
+    'Pytest',
+    'SQL',
+
     // AI/ML Technologies
-    'Machine Learning', 'Hugging Face', 'OpenAI', 'Whisper', 'AWS SageMaker', 
-    'AWS Comprehend', 'Text Analysis', 'Video Analysis', 'Image Analysis',
-    
+    'Machine Learning',
+    'Hugging Face',
+    'OpenAI',
+    'Whisper',
+    'AWS SageMaker',
+    'AWS Comprehend',
+    'Text Analysis',
+    'Video Analysis',
+    'Image Analysis',
+
     // Development Tools & Cloud
-    'JavaScript', 'Git', 'Docker', 'AI Agents', 'Agno', 'Apify', 
-    'Social Media Scraping'
+    'JavaScript',
+    'Git',
+    'Docker',
+    'AI Agents',
+    'Agno',
+    'Apify',
+    'Social Media Scraping',
   ];
 
   return (
@@ -151,37 +171,88 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Hamza Bilal and I'm a passionate Full-Stack Developer and AI/ML Engineer specializing in 
-              backend development, machine learning, and AI-powered applications. My journey in programming began during 
-              my studies in Data Science, where I discovered the incredible potential of Python for building robust, 
-              scalable applications and intelligent systems.
+              Hello! My name is Hamza Bilal and I'm a passionate Full-Stack Developer and AI/ML
+              Engineer specializing in backend development, machine learning, and AI-powered
+              applications. My journey in programming began during my studies in Data Science, where
+              I discovered the incredible potential of Python for building robust, scalable
+              applications and intelligent systems.
             </p>
 
             <p>
-              I specialize in backend development with extensive expertise in Django, Django REST Framework, FastAPI, 
-              and Flask. My experience spans across building RESTful APIs, implementing OAuth flows, and creating 
-              modular architecture patterns. I'm proficient in SQL databases, Git version control, and comprehensive 
-              testing with pytest, ensuring high-quality, maintainable code.
+              I specialize in backend development with extensive expertise in Django, Django REST
+              Framework, FastAPI, and Flask. My experience spans across building RESTful APIs,
+              implementing OAuth flows, and creating modular architecture patterns. I'm proficient
+              in SQL databases, Git version control, and comprehensive testing with pytest, ensuring
+              high-quality, maintainable code.
             </p>
 
             <p>
-              My passion lies in the intersection of AI and web development. I have extensive experience working with 
-              Hugging Face models for text analysis, video analysis, and image analysis projects. I've built AI agents 
-              for transcript generation using Agno and OpenAI, and implemented Whisper models for video transcription 
-              and analysis. My work includes deploying custom ML models on AWS SageMaker and utilizing AWS Comprehend 
-              for advanced text analysis.
+              My passion lies in the intersection of AI and web development. I have extensive
+              experience working with Hugging Face models for text analysis, video analysis, and
+              image analysis projects. I've built AI agents for transcript generation using Agno and
+              OpenAI, and implemented Whisper models for video transcription and analysis. My work
+              includes deploying custom ML models on AWS SageMaker and utilizing AWS Comprehend for
+              advanced text analysis.
             </p>
 
             <p>
-              I've also worked on data scraping projects, extracting valuable insights from social media platforms using 
-              Apify and other advanced techniques. These projects involved comprehensive text and video analysis, 
-              leveraging ML models to derive meaningful patterns and trends from large datasets.
+              I've also worked on data scraping projects, extracting valuable insights from social
+              media platforms using Apify and other advanced techniques. These projects involved
+              comprehensive text and video analysis, leveraging ML models to derive meaningful
+              patterns and trends from large datasets.
+            </p>
+
+            <h3>Social Media Assessment (End-to-End AI/ML System)</h3>
+            <p>
+              I engineered an end-to-end social media assessment pipeline that ingests creator
+              content from TikTok, Instagram, Facebook, and YouTube using <b>Apify</b> crawlers. The
+              pipeline standardizes posts, captions, thumbnails, and videos, then routes them to
+              specialized analyzers:
+            </p>
+            <ul className="skills-list">
+              <li>
+                TextAnalyzer: AWS Comprehend for sentiment, key phrases, entities, and language.
+              </li>
+              <li>
+                ImageAnalyzer: Custom CNN models deployed on AWS SageMaker, consumed via HTTPS
+                endpoints.
+              </li>
+              <li>
+                VideoAnalyzer: Video → frames every 3 seconds → batch image analysis → aggregate
+                insights.
+              </li>
+              <li>Transcription: OpenAI Whisper for accurate multilingual speech-to-text.</li>
+              <li>
+                Agents: Task-specific AI agents orchestrated with Agno + OpenAI for enrichment and
+                reporting.
+              </li>
+            </ul>
+
+            <h3>Python Web Frameworks in My Workflow</h3>
+            <p>
+              I build robust backends with <b>Django</b> for admin, ORM, and authentication; expose
+              clean REST APIs with
+              <b>Django REST Framework</b> for browsable APIs and permissions; use <b>FastAPI</b>{' '}
+              for high-performance, async microservices (model-serving, webhooks); and leverage{' '}
+              <b>Flask</b> for lightweight utilities and internal tools. Services communicate over
+              REST/JSON, with background jobs running via Celery/Redis.
+            </p>
+
+            <h3>ML Stack and Operations</h3>
+            <p>
+              Models and libraries I use include: Transformers and pipelines from Hugging Face,
+              OpenAI APIs, custom TensorFlow/Keras and PyTorch CNNs for image understanding, and
+              Whisper for ASR. I containerize models, deploy to <b>AWS SageMaker</b> (real-time
+              endpoints), and operationalize data flows with S3, CloudWatch, and IAM. Text
+              understanding uses <b>AWS Comprehend</b> for scalable NER, sentiment, and topic
+              signals.
             </p>
 
             <p>
-              Currently, I'm working as a Backend Developer at Distack Solutions, where I develop and maintain scalable 
-              backend services using Python, Django, and Django Rest Framework. I'm passionate about driving innovation 
-              through AI integration and continuously improving development processes with cutting-edge technologies.
+              Currently, I'm working as a Backend Developer at Distack Solutions, where I develop
+              and maintain scalable backend services using Python, Django, and Django Rest
+              Framework. I'm passionate about driving innovation through AI integration and
+              continuously improving development processes with cutting-edge technologies.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
