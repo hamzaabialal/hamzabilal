@@ -4,3 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "16"
+
+[[headers]]
+  for = "/resume.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
