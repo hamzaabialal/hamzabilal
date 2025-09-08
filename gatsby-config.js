@@ -4,10 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Hamza Bilal',
     description:
-      'Backend Python Developer specializing in Django, FastAPI, and scalable API-driven solutions with a strong focus on clean architecture, automation, and performance optimization.',
+      'Hire Backend Python Developer specializing in Django & FastAPI. I build scalable APIs, SaaS backends, and automation solutions for startups & businesses.',
     siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@bchiang7',
+    twitterUsername: '@hamzaBi82043312',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
