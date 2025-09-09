@@ -16,7 +16,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,7 +28,7 @@ module.exports = {
         icon: 'src/images/logo.png',
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`, // disabled due to ReadableStream issue on Gatsby v3
     {
       resolve: `gatsby-source-filesystem`,
       options: {

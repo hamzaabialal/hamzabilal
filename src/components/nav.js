@@ -8,6 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
+// Removed modal import since Resume opens in a new tab
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -154,6 +155,7 @@ const Nav = ({ isHome }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
+  // Removed modal state; opening resume in a new tab instead
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const handleScroll = () => {
@@ -206,11 +208,7 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a
-      className="resume-button"
-      href="/resume.pdf?v=2025-09-07"
-      target="_blank"
-      rel="noopener noreferrer">
+    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );
@@ -282,6 +280,8 @@ const Nav = ({ isHome }) => {
           </>
         )}
       </StyledNav>
+
+      {/* Resume opens in a new tab; modal removed */}
     </StyledHeader>
   );
 };

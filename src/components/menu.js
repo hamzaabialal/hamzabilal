@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
+// Removed modal import since Resume opens in a new tab
 
 const StyledMenu = styled.div`
   display: none;
@@ -266,12 +267,14 @@ const Menu = () => {
               </ol>
             )}
 
-            <a href="/resume.pdf?v=2025-09-07" className="resume-link">
+            <a className="resume-link" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </nav>
         </StyledSidebar>
       </div>
+
+      {/* Resume opens in a new tab; modal removed */}
     </StyledMenu>
   );
 };
