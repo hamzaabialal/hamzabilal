@@ -42,17 +42,53 @@ const Head = ({ title, description, image }) => {
   };
 
   const keywords = [
-    'Hamza',
+    // Primary Brand Keywords
     'Hamza Bilal',
+    'Hamza Bilal Developer',
+    'Hamza Bilal Portfolio',
+
+    // High-Intent Hiring Keywords
+    'Hire Backend Developer',
+    'Hire Python Developer',
+    'Hire Django Developer',
+    'Hire FastAPI Developer',
+    'Hire AI Engineer',
+    'Hire AI Agent Developer',
+    'Freelance Backend Developer',
+    'Remote Python Developer',
+    'Backend Developer for Hire',
+    'Python Developer for Startups',
+
+    // Service Keywords
     'Backend Developer',
-    'Web Developer',
+    'AI Engineer',
     'Python Developer',
+    'Django Developer',
+    'FastAPI Developer',
+    'AI Agent Developer',
+    'Machine Learning Engineer',
+    'ML Engineer',
+    'API Developer',
+    'Build AI Agents',
+    'Custom AI Agents',
+
+    // Technology Keywords
     'Django',
     'FastAPI',
     'Flask',
     'Django REST Framework',
-    'AI Engineer',
-    'Machine Learning',
+    'Python APIs',
+    'AWS SageMaker',
+    'AWS Comprehend',
+    'OpenAI Integration',
+    'LangChain Developer',
+
+    // GEO Keywords
+    'Backend Developer Pakistan',
+    'Python Developer Pakistan',
+    'AI Engineer Pakistan',
+    'Remote Developer Asia',
+    'Offshore Python Developer',
   ];
 
   const jsonLdWebsite = {
@@ -76,75 +112,138 @@ const Head = ({ title, description, image }) => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Hamza Bilal',
+    givenName: 'Hamza',
+    familyName: 'Bilal',
     url: canonicalBase,
-    jobTitle: 'Backend Developer',
+    jobTitle: ['Backend Developer', 'AI Engineer', 'Python Developer', 'AI Agent Developer'],
     email: 'mailto:hamzaabialal@gmail.com',
+    description:
+      'Expert Backend Developer and AI Engineer specializing in Django, FastAPI, Python APIs, and building custom AI Agents. Available for hire worldwide.',
     knowsAbout: [
       'Django',
+      'Django REST Framework',
       'FastAPI',
+      'Flask',
+      'Python',
       'REST APIs',
+      'GraphQL',
       'Celery',
-      'xhtml2pdf',
+      'Redis',
+      'PostgreSQL',
+      'MySQL',
+      'AI Agents',
+      'OpenAI',
+      'LangChain',
+      'Machine Learning',
+      'AWS SageMaker',
+      'AWS Comprehend',
+      'Docker',
+      'Kubernetes',
+      'CI/CD',
+      'Microservices',
+      'API Integration',
       'Zoom API',
       'Salesforce API',
-      'Python Developer',
-      'Backend Developer',
-      'API Developer',
-      'AI Developer',
-      'Deployed Custom Models in AWS Comprehened',
     ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'PK',
+      addressRegion: 'Pakistan',
+    },
+    nationality: {
+      '@type': 'Country',
+      name: 'Pakistan',
+    },
+    workLocation: {
+      '@type': 'VirtualLocation',
+      name: 'Remote - Worldwide',
+    },
     sameAs: [
       'https://www.linkedin.com/in/hamza-bilal-600968245/',
       'https://github.com/hamzaabialal',
+      'https://hamzabilal.dev',
     ],
   };
 
   const jsonLdService = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Backend Development & AI Services',
-    serviceType: 'Software Development',
-    areaServed: 'Worldwide',
+    '@type': 'ProfessionalService',
+    name: 'Hamza Bilal - Backend Development & AI Engineering Services',
+    serviceType: ['Software Development', 'AI Development', 'Backend Development', 'API Development'],
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 0,
+        longitude: 0,
+      },
+      geoRadius: '40075000',
+      description: 'Worldwide - Remote Services Available Globally',
+    },
     provider: {
       '@type': 'Person',
       name: 'Hamza Bilal',
       url: canonicalBase,
     },
     url: canonicalBase,
+    description:
+      'Hire expert Backend Developer and AI Engineer for Django, FastAPI, Python APIs, and custom AI Agents. Scalable solutions for startups and enterprises.',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Backend & AI Offerings',
+      name: 'Backend & AI Development Services',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Django / DRF API Development',
-            description: 'REST APIs, authentication, permissions, admin, ORM, testing.',
+            name: 'Django & DRF Backend Development',
+            description:
+              'Build scalable REST APIs with Django and Django REST Framework. Authentication, permissions, admin panels, ORM optimization, and comprehensive testing.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'FastAPI Microservices',
-            description: 'High-performance async services, webhooks, background tasks.',
+            name: 'FastAPI Microservices Development',
+            description:
+              'High-performance async APIs and microservices with FastAPI. Webhooks, background tasks, real-time features, and API integrations.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'AI Agents & Integrations',
-            description: 'Agno + OpenAI agents integrated with APIs and data workflows.',
+            name: 'Custom AI Agent Development',
+            description:
+              'Build intelligent AI agents using OpenAI, LangChain, and Agno. Automate workflows, integrate with your APIs, and create smart assistants for your business.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'ML Model Deployment (AWS)',
-            description: 'SageMaker endpoints, AWS Comprehend, Whisper transcription.',
+            name: 'ML Model Deployment on AWS',
+            description:
+              'Deploy machine learning models to production on AWS SageMaker. Real-time endpoints, AWS Comprehend for text analysis, Whisper for transcription.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'SaaS Backend Development',
+            description:
+              'End-to-end SaaS backend architecture. Multi-tenancy, subscription billing, user management, and scalable infrastructure.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'API Integration Services',
+            description:
+              'Integrate third-party APIs including Zoom, Salesforce, Stripe, and social media platforms. OAuth flows, webhooks, and data synchronization.',
           },
         },
       ],
@@ -157,10 +256,18 @@ const Head = ({ title, description, image }) => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Can you build AI agents?',
+        name: 'How can I hire Hamza Bilal as a Backend Developer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I build AI agents using Agno and OpenAI, integrating them with backend services and data workflows.',
+          text: 'You can hire me by reaching out via email at hamzaabialal@gmail.com or through LinkedIn. I am available for freelance projects, contract work, and full-time remote positions worldwide.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you build custom AI agents for my business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I specialize in building custom AI agents using OpenAI, LangChain, and Agno. I can create intelligent assistants, automate workflows, integrate AI with your existing systems, and build conversational AI solutions tailored to your business needs.',
         },
       },
       {
@@ -168,7 +275,7 @@ const Head = ({ title, description, image }) => {
         name: 'Which Python backend frameworks do you use?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Django, Django REST Framework, FastAPI, and Flask—selected based on project needs for admin/ORM, robust REST, high-performance async, or lightweight utilities.',
+          text: 'I work with Django, Django REST Framework, FastAPI, and Flask. I choose the best framework based on your project needs - Django for robust admin and ORM, FastAPI for high-performance async APIs, and Flask for lightweight microservices.',
         },
       },
       {
@@ -176,39 +283,31 @@ const Head = ({ title, description, image }) => {
         name: 'Do you deploy ML models on AWS?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I containerize and deploy real-time models on AWS SageMaker, use AWS Comprehend for text analysis, and Whisper for transcription when needed.',
+          text: 'Yes, I have extensive experience deploying machine learning models on AWS. I use SageMaker for real-time model endpoints, AWS Comprehend for text analysis, and can set up complete ML pipelines with monitoring and scaling.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you analyze social media content?',
+        name: 'Can you build a SaaS backend for my startup?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I ingest data from TikTok, Instagram, Facebook, and YouTube via Apify and perform text, image, and video analysis.',
+          text: 'Absolutely! I specialize in building scalable SaaS backends with multi-tenancy, user authentication, subscription billing integration (Stripe), API rate limiting, and cloud deployment. I use Django/FastAPI with PostgreSQL and Redis.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What testing and reliability practices do you follow?',
+        name: 'What is your availability and timezone?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Automated tests with pytest, background jobs with Celery/Redis, observability, and clean architecture for maintainability.',
+          text: 'I am based in Pakistan (GMT+5) and work remotely with international clients worldwide. I am flexible with timezones and can accommodate meetings and collaboration across different time zones. I am available for full-time, part-time, and project-based work.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you work with international clients remotely?',
+        name: 'Can you integrate third-party APIs like Zoom, Salesforce, or Stripe?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I collaborate remotely with international clients across time zones using clear communication, async updates, and robust delivery processes.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you integrate third-party APIs (Zoom, Salesforce, etc.)?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, I have hands-on experience integrating Zoom, Salesforce, and other third-party APIs, including OAuth flows, webhooks, and data synchronization.',
+          text: 'Yes, I have hands-on experience integrating many third-party APIs including Zoom, Salesforce, Stripe, Twilio, and social media platforms. I handle OAuth flows, webhooks, data synchronization, and error handling.',
         },
       },
       {
@@ -216,15 +315,23 @@ const Head = ({ title, description, image }) => {
         name: 'Do you provide scalable backend solutions for startups?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I design scalable, modular backends with Django/DRF and FastAPI, containerized with Docker, tested with pytest, and ready for CI/CD and cloud deployment.',
+          text: 'Yes, I design scalable, modular backends with Django/DRF and FastAPI, containerized with Docker, tested with pytest, and ready for CI/CD and cloud deployment. I build systems that can grow with your business.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Where are you located and do you work remotely?',
+        name: 'What makes you different from other Backend Developers?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I’m based in Pakistan and work remotely with international clients worldwide.',
+          text: 'I combine strong backend development skills with AI/ML expertise. I can build traditional APIs and also integrate AI capabilities like custom agents, ML model deployment, and intelligent automation - giving your product a competitive edge.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer ongoing maintenance and support?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I offer ongoing maintenance, bug fixes, feature additions, and technical support for projects I build. I believe in long-term partnerships and ensuring your systems run smoothly.',
         },
       },
     ],

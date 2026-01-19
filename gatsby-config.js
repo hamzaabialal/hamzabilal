@@ -2,9 +2,9 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Hamza Bilal',
+    title: 'Hamza Bilal | Backend Developer & AI Engineer - Hire for Django, FastAPI & AI Agents',
     description:
-      'Hire Backend Python Developer specializing in Django & FastAPI. I build scalable APIs, SaaS backends, and automation solutions for startups & businesses.',
+      'Hire Hamza Bilal - Expert Backend Developer & AI Engineer specializing in Django, FastAPI, Python APIs, and AI Agents. Build scalable backends, deploy ML models on AWS, and integrate AI into your business. Available for freelance & remote projects worldwide.',
     siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@hamzaBi82043312',
