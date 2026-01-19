@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
@@ -61,13 +62,16 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Hamza Bilal.</h2>;
-  const three = <h3 className="big-heading">I build backend solutions.</h3>;
+  const three = (
+    <h3 className="big-heading">I build backend solutions & AI agents.</h3>
+  );
   const four = (
     <>
       <p>
-        I'm a Python Developer specializing in backend development with expertise in Django,
-        FastAPI, Flask, and pytest. I also build AI agents and production ML services, deploying
-        models on AWS (e.g., SageMaker and Comprehend) and integrating them into APIs. Currently,
+        I'm a <strong>Backend Developer</strong> and <strong>AI Engineer</strong> specializing in{' '}
+        <strong>Django</strong>, <strong>FastAPI</strong>, Flask, and pytest. I also build{' '}
+        <strong>custom AI agents</strong> and production ML services, deploying models on{' '}
+        <strong>AWS</strong> (SageMaker and Comprehend) and integrating them into APIs. Currently,
         I'm focused on building scalable backend and AI-driven APIs at{' '}
         <a
           href="https://www.linkedin.com/in/hamza-bilal-600968245/"
@@ -75,7 +79,8 @@ const Hero = () => {
           rel="noreferrer">
           Distack Solutions
         </a>
-        .
+        . <Link to="/#about">Learn more about me</Link> or{' '}
+        <Link to="/#projects">view my projects</Link>.
       </p>
     </>
   );

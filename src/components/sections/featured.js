@@ -403,7 +403,11 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className="img" />
+                    <GatsbyImage
+                      image={image}
+                      alt={`${title} - Project by Hamza Bilal, Backend Developer and AI Engineer`}
+                      className="img"
+                    />
                   </a>
                 </div>
               </StyledProject>

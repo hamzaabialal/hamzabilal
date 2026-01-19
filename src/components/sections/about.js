@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
@@ -171,35 +172,41 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Hamza Bilal and I'm a passionate Full-Stack Developer and AI/ML
-              Engineer specializing in backend development, machine learning, and AI-powered
-              applications. My journey in programming began during my studies in Data Science, where
-              I discovered the incredible potential of Python for building robust, scalable
-              applications and intelligent systems.
+              Hello! My name is <strong>Hamza Bilal</strong> and I'm a passionate{' '}
+              <strong>Backend Developer</strong> and <strong>AI Engineer</strong> specializing in
+              backend development, machine learning, and AI-powered applications. My journey in
+              programming began during my studies in Data Science, where I discovered the incredible
+              potential of <strong>Python</strong> for building robust, scalable applications and
+              intelligent systems.{' '}
+              <Link to="/pensieve">Read my blog</Link> for technical insights.
             </p>
 
             <p>
-              I specialize in backend development with extensive expertise in Django, Django REST
-              Framework, FastAPI, and Flask. My experience spans across building RESTful APIs,
-              implementing OAuth flows, and creating modular architecture patterns. I'm proficient
-              in SQL databases, Git version control, and comprehensive testing with pytest, ensuring
-              high-quality, maintainable code.
+              I specialize in <strong>backend development</strong> with extensive expertise in{' '}
+              <strong>Django</strong>, <strong>Django REST Framework</strong>,{' '}
+              <strong>FastAPI</strong>, and <strong>Flask</strong>. My experience spans across
+              building RESTful APIs, implementing OAuth flows, and creating modular architecture
+              patterns. I'm proficient in SQL databases, Git version control, and comprehensive
+              testing with pytest, ensuring high-quality, maintainable code. Check out my{' '}
+              <Link to="/#projects">featured projects</Link> to see my work.
             </p>
 
             <p>
-              My passion lies in the intersection of AI and web development. I have extensive
-              experience working with Hugging Face models for text analysis, video analysis, and
-              image analysis projects. I've built AI agents for transcript generation using Agno and
-              OpenAI, and implemented Whisper models for video transcription and analysis. My work
-              includes deploying custom ML models on AWS SageMaker and utilizing AWS Comprehend for
-              advanced text analysis.
+              My passion lies in the intersection of <strong>AI</strong> and web development. I have
+              extensive experience working with Hugging Face models for text analysis, video
+              analysis, and image analysis projects. I've built{' '}
+              <strong>AI agents</strong> for transcript generation using Agno and OpenAI, and
+              implemented Whisper models for video transcription and analysis. My work includes
+              deploying custom <strong>ML models on AWS SageMaker</strong> and utilizing AWS
+              Comprehend for advanced text analysis.
             </p>
 
             <p>
               I've also worked on data scraping projects, extracting valuable insights from social
               media platforms using Apify and other advanced techniques. These projects involved
               comprehensive text and video analysis, leveraging ML models to derive meaningful
-              patterns and trends from large datasets.
+              patterns and trends from large datasets. View my{' '}
+              <Link to="/archive">complete project archive</Link>.
             </p>
 
             <h3>Social Media Assessment (End-to-End AI/ML System)</h3>
@@ -271,7 +278,7 @@ const About = () => {
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
+              alt="Hamza Bilal - Backend Developer and AI Engineer specializing in Django, FastAPI, and AI Agents"
             />
           </div>
         </StyledPic>

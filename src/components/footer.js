@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from '@components/icons';
@@ -50,6 +51,20 @@ const StyledCredit = styled.div`
     padding: 10px;
   }
 
+  .footer-links {
+    margin-bottom: 10px;
+
+    a {
+      color: var(--slate);
+      padding: 5px 10px;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--green);
+      }
+    }
+  }
+
   .github-stats {
     margin-top: 10px;
 
@@ -83,6 +98,13 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledCredit tabindex="-1">
+      <div className="footer-links">
+        <Link to="/sitemap">Sitemap</Link>
+        <span>|</span>
+        <Link to="/pensieve">Blog</Link>
+        <span>|</span>
+        <Link to="/archive">Projects</Link>
+      </div>
       <a href="https://github.com/hamzaabialal">
         <div>Designed &amp; Built by Hamza Bilal</div>
       </a>
