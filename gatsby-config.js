@@ -2,11 +2,12 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Hamza Bilal | Backend Developer & AI Engineer - Hire for Django, FastAPI & AI Agents',
+    title:
+      'Hamza Bilal | Top Backend Developer & AI Engineer  - Hire for Django, FastAPI & AI Agents',
     description:
-      'Hire Hamza Bilal - Expert Backend Developer & AI Engineer specializing in Django, FastAPI, Python APIs, and AI Agents. Build scalable backends, deploy ML models on AWS, and integrate AI into your business. Available for freelance & remote projects worldwide.',
+      'Hamza Bilal is a leading Backend Developer and AI Engineer in Pakistan, specializing in Django, FastAPI, and Generative AI solutions.',
     siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/og.webp', // Path to your image you placed in the 'static' folder
     twitterUsername: '@hamzaBi82043312',
   },
   plugins: [

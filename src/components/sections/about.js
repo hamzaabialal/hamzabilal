@@ -177,8 +177,7 @@ const About = () => {
               backend development, machine learning, and AI-powered applications. My journey in
               programming began during my studies in Data Science, where I discovered the incredible
               potential of <strong>Python</strong> for building robust, scalable applications and
-              intelligent systems.{' '}
-              <Link to="/pensieve">Read my blog</Link> for technical insights.
+              intelligent systems. <Link to="/pensieve">Read my blog</Link> for technical insights.
             </p>
 
             <p>
@@ -194,11 +193,11 @@ const About = () => {
             <p>
               My passion lies in the intersection of <strong>AI</strong> and web development. I have
               extensive experience working with Hugging Face models for text analysis, video
-              analysis, and image analysis projects. I've built{' '}
-              <strong>AI agents</strong> for transcript generation using Agno and OpenAI, and
-              implemented Whisper models for video transcription and analysis. My work includes
-              deploying custom <strong>ML models on AWS SageMaker</strong> and utilizing AWS
-              Comprehend for advanced text analysis.
+              analysis, and image analysis projects. I've built <strong>AI agents</strong> for
+              transcript generation using Agno and OpenAI, and implemented Whisper models for video
+              transcription and analysis. My work includes deploying custom{' '}
+              <strong>ML models on AWS SageMaker</strong> and utilizing AWS Comprehend for advanced
+              text analysis.
             </p>
 
             <p>
@@ -274,7 +273,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/1703362284626.jpeg"
+              src="../../images/1703362284626.webp"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
