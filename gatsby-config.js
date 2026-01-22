@@ -5,10 +5,11 @@ module.exports = {
     title:
       'Hamza Bilal | Top Backend Developer & AI Engineer  - Hire for Django, FastAPI & AI Agents',
     description:
-      'Hamza Bilal is a leading Backend Developer and AI Engineer in Pakistan, specializing in Django, FastAPI, and Generative AI solutions.',
+      'Hamza Bilal: Senior AI Engineer & Backend Developer. Expert in Python, Django, FastAPI, and building Autonomous AI Agents with RAG architecture.',
     siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
     image: '/og.webp', // Path to your image you placed in the 'static' folder
     twitterUsername: '@hamzaBi82043312',
+    keywords: `Backend Developer, AI Engineer, Python Developer, Django Developer, FastAPI Developer, AI Agent Developer, Machine Learning Engineer, ML Engineer, API Developer, Build AI Agents, Custom AI Agents`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

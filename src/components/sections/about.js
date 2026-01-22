@@ -277,7 +277,7 @@ const About = () => {
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Hamza Bilal - Backend Developer and AI Engineer specializing in Django, FastAPI, and AI Agents"
+              alt="Hamza Bilal - Senior AI Engineer and Python Developer based in Pakistan, expert in LLM orchestration."
             />
           </div>
         </StyledPic>

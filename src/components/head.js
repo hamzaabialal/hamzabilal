@@ -169,7 +169,12 @@ const Head = ({ title, description, image }) => {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Hamza Bilal - Backend Development & AI Engineering Services',
-    serviceType: ['Software Development', 'AI Development', 'Backend Development', 'API Development'],
+    serviceType: [
+      'Software Development',
+      'AI Development',
+      'Backend Development',
+      'API Development',
+    ],
     areaServed: {
       '@type': 'GeoCircle',
       geoMidpoint: {
@@ -340,25 +345,24 @@ const Head = ({ title, description, image }) => {
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
-
-      <meta name="description" content={seo.description} />
+      <meta
+        name="description"
+        content="Hamza Bilal - Senior AI Engineer & Backend Developer specializing in Django, FastAPI, and Autonomous AI Agents. Expert in Python and ML."
+      />{' '}
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="image" content={seo.image} />
       <link rel="canonical" href={seo.url} />
-
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={defaultTitle || 'Hamza Bilal'} />
-
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
-
       <meta name="google-site-verification" content="qENLeOdnrBPsfj3q82IZ7OZb089_hl1SPYvny0LrrtU" />
       <script type="application/ld+json">{JSON.stringify(jsonLdWebsite)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLdPerson)}</script>

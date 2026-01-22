@@ -10,17 +10,20 @@ tech:
   - Deep Learning
   - EfficientNet
   - HTML
+description: 'AI-powered Brain Tumor Detection system built with Python, TensorFlow, and EfficientNet Deep Learning. Developed by Hamza Bilal, a Senior AI Engineer and Backend Developer.'
 showInProjects: true
 ---
 
 This project focuses on developing a web-based application for detecting brain tumors using deep learning models, specifically the EfficientNet architecture. The platform is built using Django, a powerful web framework for building scalable and maintainable web applications, and incorporates Django's templating system for rendering user interfaces dynamically.
 
 ## Key Features
+
 - Django Templates
 - Django Framework
 - Machine Learning
 - Back-End Web Development
 - HTML Interface
+- AI Agent Development
 - EfficientNet Deep Learning Model
 - Medical Image Analysis
 - EfficientNet Deep Learning Model
