@@ -43,8 +43,8 @@ module.exports = {
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({
     origin: 'bottom',
-    distance: '20px',
-    duration: 500,
+    distance: '0px',
+    duration: 300,
     delay,
     rotate: { x: 0, y: 0, z: 0 },
     opacity: 0,

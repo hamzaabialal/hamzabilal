@@ -402,7 +402,9 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a
+                    href={external ? external : github ? github : '#'}
+                    aria-label={`View ${title} project details`}>
                     <GatsbyImage
                       image={image}
                       alt={`${title} - Project by Hamza Bilal, Backend Developer and AI Engineer`}

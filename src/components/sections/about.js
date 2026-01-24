@@ -177,7 +177,8 @@ const About = () => {
               backend development, machine learning, and AI-powered applications. My journey in
               programming began during my studies in Data Science, where I discovered the incredible
               potential of <strong>Python</strong> for building robust, scalable applications and
-              intelligent systems. <Link to="/pensieve">Read my blog</Link> for technical insights.
+              intelligent systems. <Link to="/pensieve">Read my technical blog posts</Link> for
+              insights.
             </p>
 
             <p>

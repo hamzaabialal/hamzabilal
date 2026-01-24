@@ -2,14 +2,14 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title:
-      'Hamza Bilal | Top Backend Developer & AI Engineer  - Hire for Django, FastAPI & AI Agents',
+    title: 'Hamza Bilal | Backend Developer & AI Engineer | Django, FastAPI',
     description:
-      'Hamza Bilal: Senior AI Engineer & Backend Developer. Expert in Python, Django, FastAPI, and building Autonomous AI Agents with RAG architecture.',
-    siteUrl: 'https://hamzabilal.dev', // No trailing slash allowed!
-    image: '/og.webp', // Path to your image you placed in the 'static' folder
+      'Hamza Bilal - Backend Developer & AI Engineer. Expert in Django, FastAPI, Python, and building custom AI Agents for scalable backend systems.',
+    siteUrl: 'https://hamzabilal.dev',
+    image: '/og.webp',
     twitterUsername: '@hamzaBi82043312',
-    keywords: `Backend Developer, AI Engineer, Python Developer, Django Developer, FastAPI Developer, AI Agent Developer, Machine Learning Engineer, ML Engineer, API Developer, Build AI Agents, Custom AI Agents`,
+    keywords:
+      'Hamza Bilal, Backend Developer, AI Engineer, Django, FastAPI, Python, AI Agents, Machine Learning, API Development',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

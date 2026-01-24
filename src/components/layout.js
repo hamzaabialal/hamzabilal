@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { Head, Loader, Nav, Social, Email, Footer } from '@components';
 import { GlobalStyle, theme } from '@styles';
+import { usePrefersReducedMotion } from '@hooks';
 
 const StyledContent = styled.div`
   display: flex;
@@ -12,7 +13,9 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(isHome);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  // Skip loader if user prefers reduced motion for better LCP
+  const [isLoading, setIsLoading] = useState(isHome && !prefersReducedMotion);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {

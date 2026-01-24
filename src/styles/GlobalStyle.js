@@ -362,26 +362,21 @@ const GlobalStyle = createGlobalStyle`
 
   .skip-to-content {
     ${({ theme }) => theme.mixins.button};
-    position: absolute;
-    top: auto;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    z-index: -99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--green);
+    color: var(--navy);
 
-    &:hover,
-    &:focus {
-      background-color: var(--green);
-      color: var(--navy);
-      top: 0;
-      left: 0;
-      width: auto;
-      height: auto;
-      overflow: auto;
-      z-index: 99;
-      box-shadow: none;
-      transform: none;
+    &:focus,
+    &:focus-visible {
+      transform: translateY(0);
+      outline: 2px dashed var(--green);
+      outline-offset: 3px;
     }
   }
 

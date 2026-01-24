@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { navDelay, loaderDelay } from '@utils';
-import { usePrefersReducedMotion } from '@hooks';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -18,7 +15,7 @@ const StyledHeroSection = styled.section`
     padding-top: var(--nav-height);
   }
 
-  h1 {
+  .greeting {
     margin: 0 0 30px 4px;
     color: var(--green);
     font-family: var(--font-mono);
@@ -30,8 +27,16 @@ const StyledHeroSection = styled.section`
     }
   }
 
-  h3 {
+  h1 {
+    margin: 0;
+    font-size: clamp(40px, 8vw, 80px);
+    color: var(--lightest-slate);
+    line-height: 1.1;
+  }
+
+  h2 {
     margin-top: 5px;
+    font-size: clamp(40px, 8vw, 80px);
     color: var(--slate);
     line-height: 0.9;
   }
@@ -47,73 +52,34 @@ const StyledHeroSection = styled.section`
   }
 `;
 
-const Hero = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  const prefersReducedMotion = usePrefersReducedMotion();
-
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
-    const timeout = setTimeout(() => setIsMounted(true), navDelay);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Hamza Bilal.</h2>;
-  const three = (
-    <h3 className="big-heading">
-      Backend Developer & AI Engineer specializing in Scalable Systems.
-    </h3>
-  );
-  const four = (
-    <>
-      <p>
+const Hero = () => (
+  <StyledHeroSection>
+    <span className="greeting">Hi, my name is</span>
+    <h1>Hamza Bilal.</h1>
+    <h2>Backend Developer & AI Engineer specializing in Scalable Systems.</h2>
+    <p>
         I'm a <strong>Backend Developer</strong> and <strong>AI Engineer</strong> specializing in{' '}
-        <strong>Django</strong>, <strong>FastAPI</strong>, Flask, and pytest. I also build{' '}
-        <strong>custom AI agents</strong> and production ML services, deploying models on{' '}
-        <strong>AWS</strong> (SageMaker and Comprehend) and integrating them into APIs. Currently,
+      <strong>Django</strong>, <strong>FastAPI</strong>, Flask, and pytest. I also build{' '}
+      <strong>custom AI agents</strong> and production ML services, deploying models on{' '}
+      <strong>AWS</strong> (SageMaker and Comprehend) and integrating them into APIs. Currently,
         I'm focused on building scalable backend and AI-driven APIs at{' '}
-        <a
-          href="https://www.linkedin.com/in/hamza-bilal-600968245/"
-          target="_blank"
-          rel="noreferrer">
+      <a
+        href="https://www.linkedin.com/in/hamza-bilal-600968245/"
+        target="_blank"
+        rel="noreferrer">
           Distack Solutions
-        </a>
-        . <Link to="/#about">Learn more about me</Link> or{' '}
-        <Link to="/#projects">view my projects</Link>.
-      </p>
-    </>
-  );
-  const five = (
-    <a className="email-link" href="mailto:hamzaabialal@gmail.com" target="_blank" rel="noreferrer">
-      Get In Touch
+      </a>
+        . <Link to="/#about">Read my background and skills</Link> or{' '}
+      <Link to="/#projects">explore my portfolio projects</Link>.
+    </p>
+    <a
+      className="email-link"
+      href="mailto:hamzaabialal@gmail.com"
+      target="_blank"
+      rel="noreferrer">
+        Get In Touch
     </a>
-  );
-
-  const items = [one, two, three, four, five];
-
-  return (
-    <StyledHeroSection>
-      {prefersReducedMotion ? (
-        <>
-          {items.map((item, i) => (
-            <div key={i}>{item}</div>
-          ))}
-        </>
-      ) : (
-        <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
-      )}
-    </StyledHeroSection>
-  );
-};
+  </StyledHeroSection>
+);
 
 export default Hero;

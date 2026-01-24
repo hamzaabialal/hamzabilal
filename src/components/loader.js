@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
 import styled from 'styled-components';
 import { IconLoader } from '@components/icons';
 
@@ -16,12 +15,17 @@ const StyledLoader = styled.div`
   height: 100%;
   background-color: var(--dark-navy);
   z-index: 99;
+  opacity: ${props => (props.isFinishing ? 0 : 1)};
+  transition: opacity 0.2s ease-out;
 
   .logo-wrapper {
     width: max-content;
     max-width: 100px;
-    transition: var(--transition);
     opacity: ${props => (props.isMounted ? 1 : 0)};
+    transform: ${props => (props.isFinishing ? 'scale(0.8)' : 'scale(1)')};
+    transition: opacity 0.15s ease, transform 0.2s ease;
+    will-change: opacity, transform;
+
     svg {
       display: block;
       width: 100%;
@@ -29,8 +33,16 @@ const StyledLoader = styled.div`
       margin: 0 auto;
       fill: none;
       user-select: none;
+
       #B {
-        opacity: 0;
+        opacity: ${props => (props.showLetter ? 1 : 0)};
+        transition: opacity 0.15s ease;
+      }
+
+      path {
+        stroke-dasharray: 200;
+        stroke-dashoffset: ${props => (props.isMounted ? 0 : 200)};
+        transition: stroke-dashoffset 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
     }
   }
@@ -38,51 +50,36 @@ const StyledLoader = styled.div`
 
 const Loader = ({ finishLoading }) => {
   const [isMounted, setIsMounted] = useState(false);
-
-  const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
-
-    loader
-      .add({
-        targets: '#logo path',
-        delay: 300,
-        duration: 1500,
-        easing: 'easeInOutQuart',
-        strokeDashoffset: [anime.setDashoffset, 0],
-      })
-      .add({
-        targets: '#logo #B',
-        duration: 700,
-        easing: 'easeInOutQuart',
-        opacity: 1,
-      })
-      .add({
-        targets: '#logo',
-        delay: 500,
-        duration: 300,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        scale: 0.1,
-      })
-      .add({
-        targets: '.loader',
-        duration: 200,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        zIndex: -1,
-      });
-  };
+  const [showLetter, setShowLetter] = useState(false);
+  const [isFinishing, setIsFinishing] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsMounted(true), 10);
-    animate();
-    return () => clearTimeout(timeout);
-  }, []);
+    // Step 1: Mount and start path animation
+    const mountTimeout = setTimeout(() => setIsMounted(true), 10);
+
+    // Step 2: Show letter after path draws (400ms)
+    const letterTimeout = setTimeout(() => setShowLetter(true), 450);
+
+    // Step 3: Start finishing animation (600ms)
+    const finishingTimeout = setTimeout(() => setIsFinishing(true), 650);
+
+    // Step 4: Complete and unmount (850ms total - fast but professional)
+    const completeTimeout = setTimeout(() => finishLoading(), 850);
+
+    return () => {
+      clearTimeout(mountTimeout);
+      clearTimeout(letterTimeout);
+      clearTimeout(finishingTimeout);
+      clearTimeout(completeTimeout);
+    };
+  }, [finishLoading]);
 
   return (
-    <StyledLoader className="loader" isMounted={isMounted}>
+    <StyledLoader
+      className="loader"
+      isMounted={isMounted}
+      showLetter={showLetter}
+      isFinishing={isFinishing}>
       <Helmet bodyAttributes={{ class: `hidden` }} />
 
       <div className="logo-wrapper">
