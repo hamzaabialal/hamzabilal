@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import { KEY_CODES } from '@utils';
@@ -276,29 +275,28 @@ const Jobs = () => {
               const { title, url, company, range } = frontmatter;
 
               return (
-                <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
-                  <StyledTabPanel
-                    id={`panel-${i}`}
-                    role="tabpanel"
-                    tabIndex={activeTabId === i ? '0' : '-1'}
-                    aria-labelledby={`tab-${i}`}
-                    aria-hidden={activeTabId !== i}
-                    hidden={activeTabId !== i}>
-                    <h3>
-                      <span>{title}</span>
-                      <span className="company">
-                        &nbsp;@&nbsp;
-                        <a href={url} className="inline-link">
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                <StyledTabPanel
+                  key={i}
+                  id={`panel-${i}`}
+                  role="tabpanel"
+                  tabIndex={activeTabId === i ? '0' : '-1'}
+                  aria-labelledby={`tab-${i}`}
+                  aria-hidden={activeTabId !== i}
+                  hidden={activeTabId !== i}>
+                  <h3>
+                    <span>{title}</span>
+                    <span className="company">
+                      &nbsp;@&nbsp;
+                      <a href={url} className="inline-link">
+                        {company}
+                      </a>
+                    </span>
+                  </h3>
 
-                    <p className="range">{range}</p>
+                  <p className="range">{range}</p>
 
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
-                  </StyledTabPanel>
-                </CSSTransition>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                </StyledTabPanel>
               );
             })}
         </StyledTabPanels>
