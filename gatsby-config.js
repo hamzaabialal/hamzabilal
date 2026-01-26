@@ -6,7 +6,7 @@ module.exports = {
     description:
       'Hamza Bilal - Backend Developer & AI Engineer. Expert in Django, FastAPI, Python, and building custom AI Agents for scalable backend systems.',
     siteUrl: 'https://hamzabilal.dev',
-    image: '/og.png',
+    image: '/og-image.png',
     twitterUsername: '@hamzaBi82043312',
     keywords:
       'Hamza Bilal, Backend Developer, AI Engineer, Django, FastAPI, Python, AI Agents, Machine Learning, API Development',
