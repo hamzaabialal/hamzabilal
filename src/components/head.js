@@ -54,10 +54,13 @@ const Head = ({ title, description, image }) => {
     'Hire FastAPI Developer',
     'Hire AI Engineer',
     'Hire AI Agent Developer',
+    'Hire AI Automation Engineer',
     'Freelance Backend Developer',
     'Remote Python Developer',
     'Backend Developer for Hire',
     'Python Developer for Startups',
+    'Upwork Freelancer',
+    'Hire on Upwork',
 
     // Service Keywords
     'Backend Developer',
@@ -82,6 +85,10 @@ const Head = ({ title, description, image }) => {
     'AWS Comprehend',
     'OpenAI Integration',
     'LangChain Developer',
+    'N8n Automation',
+    'Make.com',
+    'Zapier Automation',
+    'AI Automation',
 
     // GEO Keywords
     'Backend Developer Pakistan',
@@ -115,7 +122,14 @@ const Head = ({ title, description, image }) => {
     givenName: 'Hamza',
     familyName: 'Bilal',
     url: canonicalBase,
-    jobTitle: ['Backend Developer', 'AI Engineer', 'Python Developer', 'AI Agent Developer'],
+    jobTitle: [
+      'Backend Developer',
+      'AI Engineer',
+      'AI Automation Engineer',
+      'Python Developer',
+      'Full Stack Developer',
+      'AI Agent Developer',
+    ],
     email: 'mailto:hamzaabialal@gmail.com',
     description:
       'Expert Backend Developer and AI Engineer specializing in Django, FastAPI, Python APIs, and building custom AI Agents. Available for hire worldwide.',
@@ -144,6 +158,11 @@ const Head = ({ title, description, image }) => {
       'API Integration',
       'Zoom API',
       'Salesforce API',
+      'N8n',
+      'Make.com',
+      'Zapier',
+      'AI Automation',
+      'Full Stack Development',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -161,6 +180,7 @@ const Head = ({ title, description, image }) => {
     sameAs: [
       'https://www.linkedin.com/in/hamza-bilal-600968245/',
       'https://github.com/hamzaabialal',
+      'https://www.upwork.com/freelancers/~016dcbde991464381d',
       'https://hamzabilal.dev',
     ],
   };

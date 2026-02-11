@@ -154,14 +154,20 @@ const About = () => {
     'Video Analysis',
     'Image Analysis',
 
-    // Development Tools & Cloud
+    // AI Automation
+    'N8n',
+    'Make.com',
+    'Zapier',
+
+    // Full Stack & Development Tools
     'JavaScript',
+    'React',
+    'HTML/CSS',
     'Git',
     'Docker',
     'AI Agents',
     'Agno',
     'Apify',
-    'Social Media Scraping',
   ];
 
   return (

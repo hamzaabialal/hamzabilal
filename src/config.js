@@ -10,6 +10,10 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/hamza-bilal-600968245/',
     },
+    {
+      name: 'Upwork',
+      url: 'https://www.upwork.com/freelancers/~016dcbde991464381d',
+    },
   ],
 
   navLinks: [
