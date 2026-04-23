@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const Head = ({ title, description, image }) => {
   const { pathname } = useLocation();
+  const isHomepage = pathname === '/' || pathname === '';
 
   const { site } = useStaticQuery(
     graphql`
@@ -535,8 +536,8 @@ const Head = ({ title, description, image }) => {
       <meta name="google-site-verification" content="JYfQ0qgER--rJP2XM6618-D8OO37NUhhkq2w1RS1ITI" />
       <script type="application/ld+json">{JSON.stringify(jsonLdWebsite)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLdPerson)}</script>
-      <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
-      <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
+      {isHomepage && <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>}
+      {isHomepage && <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>}
     </Helmet>
   );
 };
