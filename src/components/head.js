@@ -384,6 +384,7 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="google-site-verification" content="qENLeOdnrBPsfj3q82IZ7OZb089_hl1SPYvny0LrrtU" />
+      <meta name="google-site-verification" content="JYfQ0qgER--rJP2XM6618-D8OO37NUhhkq2w1RS1ITI" />
       <script type="application/ld+json">{JSON.stringify(jsonLdWebsite)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLdPerson)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>
