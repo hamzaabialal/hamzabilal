@@ -22,6 +22,36 @@ const StyledProject = styled.li`
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(-6px);
+    }
+    &:hover .project-description {
+      box-shadow: 0 24px 60px -18px rgba(100, 255, 218, 0.25);
+      border-left: 2px solid var(--green);
+    }
+    &:hover .project-title {
+      color: var(--green);
+      transition: color 240ms ease;
+    }
+    &:hover .project-image .img {
+      filter: none;
+      mix-blend-mode: normal;
+      transform: scale(1.03);
+    }
+    &:hover .project-image a {
+      background: transparent;
+    }
+    &:hover .project-image a:before {
+      background: transparent;
+    }
+  }
+
+  .project-image .img {
+    transition: filter 400ms ease, transform 400ms ease;
+  }
 
   @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.boxShadow};
@@ -334,6 +364,7 @@ const Featured = () => {
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
+  const parallaxImages = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -344,6 +375,27 @@ const Featured = () => {
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return undefined;
+    }
+    let rafId;
+    const update = () => {
+      parallaxImages.current.forEach(el => {
+        if (!el) {return;}
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight || 800;
+        // Progress: -1 when below viewport, 0 centered, 1 above
+        const progress = Math.max(-1, Math.min(1, (rect.top + rect.height / 2 - vh / 2) / vh));
+        const offset = -progress * 28; // -28 to +28 px
+        el.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
+      });
+      rafId = requestAnimationFrame(update);
+    };
+    rafId = requestAnimationFrame(update);
+    return () => cancelAnimationFrame(rafId);
+  }, [prefersReducedMotion]);
 
   return (
     <section id="projects">
@@ -401,7 +453,10 @@ const Featured = () => {
                   </div>
                 </div>
 
-                <div className="project-image">
+                <div
+                  className="project-image"
+                  ref={el => (parallaxImages.current[i] = el)}
+                  style={{ willChange: 'transform' }}>
                   <a
                     href={external ? external : github ? github : '#'}
                     aria-label={`View ${title} project details`}>

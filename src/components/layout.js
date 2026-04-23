@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import {
+  Head,
+  Loader,
+  Nav,
+  Social,
+  Email,
+  Footer,
+  ScrollProgress,
+  Aurora,
+  CursorGlow,
+} from '@components';
 import { GlobalStyle, theme } from '@styles';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -9,6 +19,13 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+
+  /* Lift only the main content wrapper above the Aurora backdrop.
+     Nav, Side, and other fixed-positioned components handle their own z-index. */
+  > #content {
+    position: relative;
+    z-index: 1;
+  }
 `;
 
 const Layout = ({ children, location }) => {
@@ -65,6 +82,9 @@ const Layout = ({ children, location }) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
+              <Aurora />
+              <CursorGlow />
+              <ScrollProgress />
               <Nav isHome={isHome} />
               <Social isHome={isHome} />
               <Email isHome={isHome} />

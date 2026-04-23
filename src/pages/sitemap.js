@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
@@ -112,7 +113,10 @@ const SitemapPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query {
       posts: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/posts/" }, frontmatter: { draft: { ne: true } } }
+        filter: {
+          fileAbsolutePath: { regex: "/content/posts/" }
+          frontmatter: { draft: { ne: true } }
+        }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -149,10 +153,10 @@ const SitemapPage = ({ location }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>Sitemap | Hamza Bilal - Backend Developer & AI Engineer</title>
+        <title>Sitemap | Hamza Bilal — AI Automation Engineer & n8n Developer</title>
         <meta
           name="description"
-          content="Complete sitemap of Hamza Bilal's portfolio. Navigate to all pages including services, projects, blog posts, and contact information."
+          content="Complete sitemap of Hamza Bilal's AI automation portfolio — hire an AI Automation Engineer, n8n developer, Make.com expert, and AI agent developer serving USA, UK, Germany, and Australia."
         />
         <link rel="canonical" href="https://hamzabilal.dev/sitemap" />
       </Helmet>
@@ -160,8 +164,8 @@ const SitemapPage = ({ location }) => {
       <StyledSitemapSection>
         <h1>Sitemap</h1>
         <p className="subtitle">
-          Navigate through all pages and content on hamzabilal.dev - Your guide to hiring a Backend
-          Developer & AI Engineer.
+          Navigate through all pages and content on hamzabilal.dev — your guide to hiring an AI
+          Automation Engineer, n8n developer, Make.com expert, and AI Agent Developer.
         </p>
 
         <div className="sitemap-grid">
@@ -303,10 +307,7 @@ const SitemapPage = ({ location }) => {
             <h2>Connect</h2>
             <ul>
               <li>
-                <a
-                  href="mailto:hamzaabialal@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href="mailto:hamzaabialal@gmail.com" target="_blank" rel="noopener noreferrer">
                   Email: hamzaabialal@gmail.com
                 </a>
               </li>
@@ -319,10 +320,7 @@ const SitemapPage = ({ location }) => {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/hamzaabialal"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                <a href="https://github.com/hamzaabialal" target="_blank" rel="noopener noreferrer">
                   GitHub Profile
                 </a>
               </li>
@@ -348,6 +346,10 @@ const SitemapPage = ({ location }) => {
       </StyledSitemapSection>
     </Layout>
   );
+};
+
+SitemapPage.propTypes = {
+  location: PropTypes.object.isRequired,
 };
 
 export default SitemapPage;

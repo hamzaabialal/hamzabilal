@@ -2,14 +2,14 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Hamza Bilal | Backend Developer & AI Engineer | Django, FastAPI',
+    title: 'Hamza Bilal | AI Automation Engineer | n8n, Make.com, Zapier & AI Agent Developer',
     description:
-      'Hamza Bilal - Backend Developer & AI Engineer. Expert in Django, FastAPI, Python, and building custom AI Agents for scalable backend systems.',
+      'Hire Hamza Bilal — AI Automation Engineer, n8n Developer, and AI Agent Developer. Workflow automation with n8n, Make.com, Zapier; CRM, LinkedIn outreach, ecommerce & lead-gen automation for startups in USA, UK, Germany, and Australia.',
     siteUrl: 'https://hamzabilal.dev',
     image: '/og-image.png',
     twitterUsername: '@hamzaBi82043312',
     keywords:
-      'Hamza Bilal, Backend Developer, AI Engineer, Django, FastAPI, Python, AI Agents, Machine Learning, API Development',
+      'AI Automation Engineer, Workflow Automation Expert, n8n Automation Developer, Make.com Automation Expert, Zapier Automation Specialist, AI Agent Developer, Business Process Automation Consultant, Ecommerce Automation Expert, Lead Generation Automation, CRM Automation Specialist, LinkedIn Outreach Automation, Sales Automation Developer, Custom API Integration Expert, Hire AI automation engineer, Freelance n8n developer, AI workflow automation for ecommerce, Zapier expert for business automation, Custom AI agent developer for startups',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

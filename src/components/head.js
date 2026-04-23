@@ -42,60 +42,81 @@ const Head = ({ title, description, image }) => {
   };
 
   const keywords = [
-    // Primary Brand Keywords
+    // Primary Brand
     'Hamza Bilal',
-    'Hamza Bilal Developer',
-    'Hamza Bilal Portfolio',
+    'Hamza Bilal AI Automation Engineer',
+    'Hamza Bilal n8n Developer',
 
-    // High-Intent Hiring Keywords
-    'Hire Backend Developer',
-    'Hire Python Developer',
-    'Hire Django Developer',
-    'Hire FastAPI Developer',
-    'Hire AI Engineer',
-    'Hire AI Agent Developer',
-    'Hire AI Automation Engineer',
-    'Freelance Backend Developer',
-    'Remote Python Developer',
-    'Backend Developer for Hire',
-    'Python Developer for Startups',
-    'Upwork Freelancer',
-    'Hire on Upwork',
-
-    // Service Keywords
-    'Backend Developer',
-    'AI Engineer',
-    'Python Developer',
-    'Django Developer',
-    'FastAPI Developer',
+    // Primary Target Keywords
+    'AI Automation Engineer',
+    'Workflow Automation Expert',
+    'n8n Automation Developer',
+    'Make.com Automation Expert',
+    'Zapier Automation Specialist',
     'AI Agent Developer',
-    'Machine Learning Engineer',
-    'ML Engineer',
-    'API Developer',
-    'Build AI Agents',
-    'Custom AI Agents',
+    'Business Process Automation Consultant',
 
-    // Technology Keywords
-    'Django',
-    'FastAPI',
-    'Flask',
-    'Django REST Framework',
-    'Python APIs',
-    'AWS SageMaker',
-    'AWS Comprehend',
+    // Niche Client Keywords
+    'Ecommerce Automation Expert',
+    'Lead Generation Automation',
+    'CRM Automation Specialist',
+    'LinkedIn Outreach Automation',
+    'Sales Automation Developer',
+    'Custom API Integration Expert',
+
+    // Long-tail Hiring Keywords
+    'Hire AI automation engineer',
+    'Hire n8n developer',
+    'Hire Make.com expert',
+    'Hire Zapier expert',
+    'Hire AI agent developer',
+    'Freelance n8n developer',
+    'Freelance AI automation engineer',
+    'AI workflow automation for ecommerce',
+    'Zapier expert for business automation',
+    'Custom AI agent developer for startups',
+    'n8n consultant for startups',
+    'Make.com consultant for SaaS',
+
+    // Supporting Service Keywords
+    'n8n Self-Hosting',
+    'Zapier to n8n Migration',
+    'HubSpot Automation',
+    'Close CRM Automation',
+    'GoHighLevel Automation',
+    'Salesforce Automation',
+    'Notion API Automation',
+    'WhatsApp Bot Developer',
+    'Telegram Bot Developer',
     'OpenAI Integration',
     'LangChain Developer',
-    'N8n Automation',
-    'Make.com',
-    'Zapier Automation',
-    'AI Automation',
+    'Prompt Engineering',
+    'AWS SageMaker Deployment',
+    'AWS Comprehend Integration',
+    'AWS Textract OCR',
 
-    // GEO Keywords
-    'Backend Developer Pakistan',
-    'Python Developer Pakistan',
-    'AI Engineer Pakistan',
-    'Remote Developer Asia',
-    'Offshore Python Developer',
+    // Backend Support Keywords
+    'Python Backend Developer',
+    'Django Developer',
+    'FastAPI Developer',
+    'REST API Development',
+
+    // Geo Keywords (ranking in USA / Europe / Germany / Australia)
+    'AI Automation Engineer USA',
+    'AI Automation Engineer Europe',
+    'AI Automation Engineer Germany',
+    'AI Automation Engineer Australia',
+    'n8n Developer USA',
+    'n8n Developer UK',
+    'n8n Developer Germany',
+    'n8n Developer Australia',
+    'Zapier Expert USA',
+    'Make.com Expert Europe',
+    'AI Agent Developer Berlin',
+    'AI Agent Developer London',
+    'AI Agent Developer Sydney',
+    'Remote AI Automation Engineer',
+    'Offshore AI Automation Freelancer',
   ];
 
   const jsonLdWebsite = {
@@ -123,46 +144,74 @@ const Head = ({ title, description, image }) => {
     familyName: 'Bilal',
     url: canonicalBase,
     jobTitle: [
-      'Backend Developer',
-      'AI Engineer',
       'AI Automation Engineer',
-      'Python Developer',
-      'Full Stack Developer',
+      'Workflow Automation Expert',
+      'n8n Automation Developer',
+      'Make.com Automation Expert',
+      'Zapier Automation Specialist',
       'AI Agent Developer',
+      'Business Process Automation Consultant',
+      'CRM Automation Specialist',
+      'Ecommerce Automation Expert',
+      'Lead Generation Automation Developer',
+      'LinkedIn Outreach Automation Specialist',
+      'Sales Automation Developer',
+      'Custom API Integration Expert',
+      'Backend Developer',
+      'Python Developer',
     ],
     email: 'mailto:hamzaabialal@gmail.com',
     description:
-      'Expert Backend Developer and AI Engineer specializing in Django, FastAPI, Python APIs, and building custom AI Agents. Available for hire worldwide.',
+      'Hire Hamza Bilal — AI Automation Engineer, n8n / Make.com / Zapier expert, and AI Agent Developer. Builds custom AI agents, CRM & ecommerce automations, and lead-generation workflows for startups in USA, UK, Germany, and Australia.',
     knowsAbout: [
+      'AI Automation',
+      'Workflow Automation',
+      'n8n',
+      'n8n Self-Hosting',
+      'Make.com',
+      'Zapier',
+      'Zapier to n8n Migration',
+      'AI Agents',
+      'OpenAI',
+      'LangChain',
+      'Agno',
+      'Prompt Engineering',
+      'Business Process Automation',
+      'CRM Automation',
+      'HubSpot',
+      'Close CRM',
+      'GoHighLevel',
+      'Salesforce',
+      'Notion API',
+      'Ecommerce Automation',
+      'Shopify Automation',
+      'Lead Generation Automation',
+      'LinkedIn Outreach Automation',
+      'Unipile',
+      'Dripify',
+      'Sales Automation',
+      'Custom API Integration',
+      'Webhooks',
+      'OAuth 2.0',
+      'WhatsApp Bot Development',
+      'Telegram Bot Development',
+      'PDF Data Extraction',
+      'AWS SageMaker',
+      'AWS Comprehend',
+      'AWS Textract',
+      'AWS Lambda',
+      'AWS API Gateway',
+      'Python',
       'Django',
       'Django REST Framework',
       'FastAPI',
       'Flask',
-      'Python',
       'REST APIs',
-      'GraphQL',
       'Celery',
       'Redis',
       'PostgreSQL',
-      'MySQL',
-      'AI Agents',
-      'OpenAI',
-      'LangChain',
-      'Machine Learning',
-      'AWS SageMaker',
-      'AWS Comprehend',
       'Docker',
-      'Kubernetes',
       'CI/CD',
-      'Microservices',
-      'API Integration',
-      'Zoom API',
-      'Salesforce API',
-      'N8n',
-      'Make.com',
-      'Zapier',
-      'AI Automation',
-      'Full Stack Development',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -173,10 +222,14 @@ const Head = ({ title, description, image }) => {
       '@type': 'Country',
       name: 'Pakistan',
     },
-    workLocation: {
-      '@type': 'VirtualLocation',
-      name: 'Remote - Worldwide',
-    },
+    workLocation: [
+      { '@type': 'VirtualLocation', name: 'Remote - Worldwide' },
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Country', name: 'United Kingdom' },
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'Australia' },
+      { '@type': 'Place', name: 'Europe' },
+    ],
     sameAs: [
       'https://www.linkedin.com/in/hamza-bilal-600968245/',
       'https://github.com/hamzaabialal',
@@ -188,17 +241,35 @@ const Head = ({ title, description, image }) => {
   const jsonLdService = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Hamza Bilal - Backend Development & AI Engineering Services',
+    name: 'Hamza Bilal — AI Automation, n8n / Make.com / Zapier Development Services',
     serviceType: [
-      'Software Development',
-      'AI Development',
-      'Backend Development',
-      'API Development',
+      'AI Automation Engineering',
+      'Workflow Automation',
+      'n8n Development',
+      'Make.com Development',
+      'Zapier Development',
+      'AI Agent Development',
+      'Business Process Automation',
+      'CRM Automation',
+      'Ecommerce Automation',
+      'Lead Generation Automation',
+      'LinkedIn Outreach Automation',
+      'Sales Automation',
+      'Custom API Integration',
     ],
-    areaServed: {
-      '@type': 'Place',
-      name: 'Worldwide - Remote Services Available Globally',
-    },
+    areaServed: [
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Country', name: 'United Kingdom' },
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'Australia' },
+      { '@type': 'Country', name: 'Canada' },
+      { '@type': 'Country', name: 'Netherlands' },
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Spain' },
+      { '@type': 'Country', name: 'Italy' },
+      { '@type': 'Place', name: 'Europe' },
+      { '@type': 'Place', name: 'Worldwide — Remote' },
+    ],
     provider: {
       '@type': 'Person',
       name: 'Hamza Bilal',
@@ -212,27 +283,36 @@ const Head = ({ title, description, image }) => {
     },
     url: canonicalBase,
     description:
-      'Hire expert Backend Developer and AI Engineer for Django, FastAPI, Python APIs, and custom AI Agents. Scalable solutions for startups and enterprises.',
+      'Hire an expert AI Automation Engineer, n8n developer, Make.com expert, and AI agent developer. Full workflow automation, CRM, ecommerce, LinkedIn outreach, and lead-generation automations for clients in USA, UK, Germany, and Australia.',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Backend & AI Development Services',
+      name: 'AI Automation & Workflow Automation Services',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Django & DRF Backend Development',
+            name: 'n8n Automation Development',
             description:
-              'Build scalable REST APIs with Django and Django REST Framework. Authentication, permissions, admin panels, ORM optimization, and comprehensive testing.',
+              'Custom n8n workflows, self-hosted n8n setup, Zapier-to-n8n migrations, and complex multi-step automations with error handling and retries.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'FastAPI Microservices Development',
+            name: 'Make.com Scenario Development',
             description:
-              'High-performance async APIs and microservices with FastAPI. Webhooks, background tasks, real-time features, and API integrations.',
+              'Make.com scenarios with routers, iterators, aggregators, and operation-cost optimization for SaaS and ecommerce teams.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Zapier Automation',
+            description:
+              'Zapier Zaps, multi-step workflows, Paths, Webhooks by Zapier, and AI Actions with OpenAI for rapid client delivery.',
           },
         },
         {
@@ -241,34 +321,70 @@ const Head = ({ title, description, image }) => {
             '@type': 'Service',
             name: 'Custom AI Agent Development',
             description:
-              'Build intelligent AI agents using OpenAI, LangChain, and Agno. Automate workflows, integrate with your APIs, and create smart assistants for your business.',
+              'Build custom AI agents with OpenAI, LangChain, and Agno. Tool use, memory, multi-step reasoning, and production-ready deployment for startups.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'ML Model Deployment on AWS',
+            name: 'CRM Automation',
             description:
-              'Deploy machine learning models to production on AWS SageMaker. Real-time endpoints, AWS Comprehend for text analysis, Whisper for transcription.',
+              'Automate HubSpot, Close CRM, GoHighLevel, and Salesforce — lead scoring, bi-directional sync, task handoffs, and reporting pipelines.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'SaaS Backend Development',
+            name: 'Ecommerce Automation',
             description:
-              'End-to-end SaaS backend architecture. Multi-tenancy, subscription billing, user management, and scalable infrastructure.',
+              'AI workflow automation for ecommerce: order processing, Shopify / WooCommerce integrations, inventory sync, customer support bots, abandoned-cart flows.',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'API Integration Services',
+            name: 'Lead Generation Automation',
             description:
-              'Integrate third-party APIs including Zoom, Salesforce, Stripe, and social media platforms. OAuth flows, webhooks, and data synchronization.',
+              'Automated lead-gen funnels: scraping with Apify, enrichment, scoring, CRM push, and AI-personalized first-touch messaging.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'LinkedIn Outreach Automation',
+            description:
+              'Multi-channel LinkedIn + email outreach with Unipile and Dripify, AI-personalized openers, reply detection, and CRM handover.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Sales Automation',
+            description:
+              'End-to-end sales-pipeline automation: inbound routing, lead qualification with LLMs, meeting booking, and automated follow-ups.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Custom API Integration',
+            description:
+              'Webhooks, OAuth flows, event-driven integrations, and robust retry/alerting for any SaaS or internal API.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Business Process Automation Consulting',
+            description:
+              'Audit, design, and ship end-to-end automation strategy replacing manual ops with self-healing workflows.',
           },
         },
       ],
@@ -281,82 +397,114 @@ const Head = ({ title, description, image }) => {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How can I hire Hamza Bilal as a Backend Developer?',
+        name: 'How can I hire an AI automation engineer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can hire me by reaching out via email at hamzaabialal@gmail.com or through LinkedIn. I am available for freelance projects, contract work, and full-time remote positions worldwide.',
+          text: 'You can hire Hamza Bilal as your AI Automation Engineer by emailing hamzaabialal@gmail.com or through LinkedIn and Upwork. I take freelance, contract, and retainer engagements with clients in the USA, UK, Germany, Australia, and across Europe — remote and timezone-flexible.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you build custom AI agents for my business?',
+        name: 'Do you work as a freelance n8n developer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I specialize in building custom AI agents using OpenAI, LangChain, and Agno. I can create intelligent assistants, automate workflows, integrate AI with your existing systems, and build conversational AI solutions tailored to your business needs.',
+          text: 'Yes. I work as a freelance n8n developer building custom workflows, self-hosting n8n for clients, and migrating Zapier or Make.com scenarios to n8n to cut costs. Projects range from single automations to full ops-platforms with error handling, alerting, and documentation.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Which Python backend frameworks do you use?',
+        name: 'Can you build AI workflow automation for ecommerce?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I work with Django, Django REST Framework, FastAPI, and Flask. I choose the best framework based on your project needs - Django for robust admin and ORM, FastAPI for high-performance async APIs, and Flask for lightweight microservices.',
+          text: 'Yes. I build AI workflow automation for ecommerce stores — Shopify and WooCommerce integrations, order routing, inventory sync, abandoned-cart flows, AI-powered customer-support bots, and end-to-end Meta Ads → CRM pipelines for DTC brands.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you deploy ML models on AWS?',
+        name: 'Are you a Zapier expert for business automation?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I have extensive experience deploying machine learning models on AWS. I use SageMaker for real-time model endpoints, AWS Comprehend for text analysis, and can set up complete ML pipelines with monitoring and scaling.',
+          text: 'Yes. I am a Zapier Automation Specialist and build multi-step Zaps, Paths, filters, Webhooks by Zapier, and AI Actions with OpenAI. Ideal when you need fast client-ready automations without the operational overhead of self-hosted tooling.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you build a SaaS backend for my startup?',
+        name: 'Can you develop custom AI agents for startups?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Absolutely! I specialize in building scalable SaaS backends with multi-tenancy, user authentication, subscription billing integration (Stripe), API rate limiting, and cloud deployment. I use Django/FastAPI with PostgreSQL and Redis.',
+          text: 'Yes. I build custom AI agents for startups using OpenAI, LangChain, and Agno — with tool use, memory, multi-step reasoning, and production deployment. Common use cases: lead qualification agents, customer-support copilots, internal ops assistants, and content-generation pipelines.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is your availability and timezone?',
+        name: 'Do you handle Make.com scenario development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I am based in Pakistan (GMT+5) and work remotely with international clients worldwide. I am flexible with timezones and can accommodate meetings and collaboration across different time zones. I am available for full-time, part-time, and project-based work.',
+          text: 'Absolutely. I build complex Make.com scenarios using routers, iterators, aggregators, and error-handling branches. I also optimise operation usage to keep your Make.com bill under control.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you integrate third-party APIs like Zoom, Salesforce, or Stripe?',
+        name: 'Can you automate my CRM (HubSpot, Close, GoHighLevel, Salesforce)?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I have hands-on experience integrating many third-party APIs including Zoom, Salesforce, Stripe, Twilio, and social media platforms. I handle OAuth flows, webhooks, data synchronization, and error handling.',
+          text: 'Yes. I am a CRM Automation Specialist for HubSpot, Close CRM, GoHighLevel, and Salesforce — lead scoring, bi-directional sync with calendars and support tools, automated task creation, and reporting pipelines.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you provide scalable backend solutions for startups?',
+        name: 'Do you do LinkedIn outreach automation?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I design scalable, modular backends with Django/DRF and FastAPI, containerized with Docker, tested with pytest, and ready for CI/CD and cloud deployment. I build systems that can grow with your business.',
+          text: 'Yes. I build multi-channel LinkedIn + email outreach systems with Unipile and Dripify, AI-personalized first lines via OpenAI, rate-limit-aware scheduling, reply detection, and automatic CRM handover.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What makes you different from other Backend Developers?',
+        name: 'Can you build lead generation automation?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I combine strong backend development skills with AI/ML expertise. I can build traditional APIs and also integrate AI capabilities like custom agents, ML model deployment, and intelligent automation - giving your product a competitive edge.',
+          text: 'Yes. Lead-gen automations are a core specialty — scraping prospects with Apify, enriching with data providers, scoring with LLMs, pushing into HubSpot / Close / GoHighLevel, and triggering personalized first-touch outreach.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you offer ongoing maintenance and support?',
+        name: 'Do you offer custom API integration services?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I offer ongoing maintenance, bug fixes, feature additions, and technical support for projects I build. I believe in long-term partnerships and ensuring your systems run smoothly.',
+          text: 'Yes. I specialize in custom API integrations — OAuth flows, webhooks, event-driven pipelines, and robust retry / alerting. I have hands-on experience with Close, HubSpot, Salesforce, Microsoft Graph, Notion, Revolut Business, Unipile, Apify, Stripe, and many more.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you serve clients in the USA, UK, Germany, and Australia?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. I work remotely with clients across the USA, UK, Germany, Australia, and the wider EU. I am based in Pakistan (GMT+5) and am flexible with North American, European, and APAC working hours for meetings and real-time collaboration.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you migrate existing Zapier or Make.com workflows to n8n?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Zapier-to-n8n and Make.com-to-n8n migrations are a popular engagement — they typically cut monthly automation cost significantly and unlock advanced logic (self-hosting, complex branching, background queues) that SaaS tools can not match.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What rates and engagement models do you offer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I offer hourly, fixed-price, and monthly retainer engagements depending on scope. Simple automations ship in 2–5 days; complex multi-step AI workflows and lead-gen systems typically deliver in 1–3 weeks. You get a firm scope and timeline before we start.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide ongoing monitoring and support?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Every automation ships with error handling, alerting, and documentation. Optional monthly retainers cover monitoring, optimization, and new-feature rollouts so your systems stay healthy as your business grows.',
         },
       },
     ],
@@ -367,7 +515,7 @@ const Head = ({ title, description, image }) => {
       <html lang="en" />
       <meta
         name="description"
-        content="Hamza Bilal - Senior AI Engineer & Backend Developer specializing in Django, FastAPI, and Autonomous AI Agents. Expert in Python and ML."
+        content="Hire Hamza Bilal — AI Automation Engineer, n8n / Make.com / Zapier expert, and AI Agent Developer. Workflow automation, CRM automation, LinkedIn outreach, ecommerce & lead-generation automations for startups in USA, UK, Germany, and Australia."
       />{' '}
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="image" content={seo.image} />

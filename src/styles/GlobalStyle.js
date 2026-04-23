@@ -188,16 +188,29 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
 
+    /* Gradient text on the heading title */
+    background: linear-gradient(90deg, #ccd6f6 0%, #f0f6ff 40%, #ccd6f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
     &:before {
       position: relative;
       bottom: 4px;
       counter-increment: section;
       content: '0' counter(section) '.';
       margin-right: 10px;
-      color: var(--green);
       font-family: var(--font-mono);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-      font-weight: 400;
+      font-weight: 500;
+      background: var(--grad-primary);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: gradShift 6s ease-in-out infinite;
 
       @media (max-width: 480px) {
         margin-bottom: -3px;
@@ -211,9 +224,16 @@ const GlobalStyle = createGlobalStyle`
       position: relative;
       top: -5px;
       width: 300px;
-      height: 1px;
+      height: 2px;
       margin-left: 20px;
-      background-color: var(--lightest-navy);
+      border-radius: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(100, 255, 218, 0.9) 0%,
+        rgba(124, 92, 255, 0.7) 50%,
+        transparent 100%
+      );
+      box-shadow: 0 0 12px rgba(100, 255, 218, 0.35);
 
       @media (max-width: 1080px) {
         width: 200px;
@@ -225,6 +245,12 @@ const GlobalStyle = createGlobalStyle`
         margin-left: 10px;
       }
     }
+  }
+
+  @keyframes gradShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   img,

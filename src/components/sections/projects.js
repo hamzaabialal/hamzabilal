@@ -51,7 +51,14 @@ const StyledProject = styled.li`
     &:hover,
     &:focus-within {
       .project-inner {
-        transform: translateY(-7px);
+        transform: translateY(-8px);
+        box-shadow: 0 24px 60px -20px rgba(2, 12, 27, 0.9), 0 0 0 1px rgba(100, 255, 218, 0.3);
+      }
+      .project-inner::before {
+        opacity: 1;
+      }
+      .folder svg {
+        transform: rotate(-6deg) translateY(-2px);
       }
     }
   }
@@ -71,8 +78,35 @@ const StyledProject = styled.li`
     padding: 2rem 1.75rem;
     border-radius: var(--border-radius);
     background-color: var(--light-navy);
-    transition: var(--transition);
-    overflow: auto;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--border-radius);
+      padding: 1px;
+      background: linear-gradient(
+        135deg,
+        rgba(100, 255, 218, 0.5),
+        transparent 40%,
+        rgba(124, 92, 255, 0.35) 100%
+      );
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 320ms ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  .folder svg {
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .project-top {

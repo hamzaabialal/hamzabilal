@@ -38,7 +38,7 @@ const TagsPage = ({
   location,
 }) => (
   <Layout location={location}>
-    <Helmet title="Tags" />
+    <Helmet title="All Tags — AI Automation Blog" />
 
     <StyledTagsContainer>
       <span className="breadcrumb">

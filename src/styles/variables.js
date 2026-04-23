@@ -2,20 +2,28 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --dark-navy: #020c1b;
-    --navy: #0a192f;
-    --light-navy: #112240;
-    --lightest-navy: #233554;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-navy: #05070f;
+    --navy: #0a0f1f;
+    --light-navy: #111a33;
+    --lightest-navy: #1c2847;
+    --navy-shadow: rgba(2, 6, 23, 0.75);
     --dark-slate: #495670;
     --slate: #8892b0;
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
-    --white: #e6f1ff;
+    --white: #f0f6ff;
+
+    /* Primary accents — richer, gradient-ready palette */
     --green: #64ffda;
     --green-tint: rgba(100, 255, 218, 0.1);
-    --pink: #f57dff;
-    --blue: #57cbff;
+    --purple: #7c5cff;
+    --pink: #ff4ecd;
+    --blue: #00e5ff;
+
+    /* Curated gradients used across headings, borders, buttons */
+    --grad-primary: linear-gradient(135deg, #64ffda 0%, #00e5ff 40%, #7c5cff 100%);
+    --grad-aurora: linear-gradient(120deg, #64ffda 0%, #7c5cff 50%, #ff4ecd 100%);
+    --grad-glow: radial-gradient(circle at 30% 30%, rgba(100, 255, 218, 0.18), transparent 60%);
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;

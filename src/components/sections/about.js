@@ -5,14 +5,28 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import Constellation from '../constellation';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
+  position: relative;
+
+  .constellation-bg {
+    position: absolute;
+    inset: -80px -40px;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 0;
+    mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 75%);
+    -webkit-mask-image: radial-gradient(circle at 50% 40%, black 0%, transparent 75%);
+  }
 
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 768px) {
       display: block;
@@ -190,39 +204,51 @@ const About = () => {
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
+      <div className="constellation-bg" aria-hidden="true">
+        <Constellation />
+      </div>
       <h2 className="numbered-heading">About Me</h2>
 
       <div className="inner">
         <StyledText>
           <div>
             <p>
-              Hello! My name is <strong>Hamza Bilal</strong> and I'm a passionate{' '}
-              <strong>Backend Developer</strong> and <strong>AI Engineer</strong> specializing in
-              backend development, machine learning, and AI-powered applications. My journey in
-              programming began during my studies in Data Science, where I discovered the incredible
-              potential of <strong>Python</strong> for building robust, scalable applications and
-              intelligent systems. <Link to="/pensieve">Read my technical blog posts</Link> for
-              insights.
+              Hello! My name is <strong>Hamza Bilal</strong> and I work as an{' '}
+              <strong>AI Automation Engineer</strong>, <strong>Workflow Automation Expert</strong>,
+              and <strong>AI Agent Developer</strong> serving startups and agencies in the{' '}
+              <strong>USA, UK, Germany, Australia</strong>, and across Europe. I design and ship
+              production-grade automations on <strong>n8n</strong>, <strong>Make.com</strong>, and{' '}
+              <strong>Zapier</strong> that replace manual operations with self-healing pipelines.{' '}
+              <Link to="/pensieve">Read my technical blog posts</Link> for deep-dives.
             </p>
 
             <p>
-              I specialize in <strong>backend development</strong> with extensive expertise in{' '}
-              <strong>Django</strong>, <strong>Django REST Framework</strong>,{' '}
-              <strong>FastAPI</strong>, and <strong>Flask</strong>. My experience spans across
-              building RESTful APIs, implementing OAuth flows, and creating modular architecture
-              patterns. I'm proficient in SQL databases, Git version control, and comprehensive
-              testing with pytest, ensuring high-quality, maintainable code. Check out my{' '}
-              <Link to="/#projects">featured projects</Link> to see my work.
+              As a <strong>freelance n8n developer</strong> and{' '}
+              <strong>Make.com automation expert</strong>, my core focus is{' '}
+              <strong>business process automation</strong> — connecting CRMs, marketing tools, and
+              LLMs into a single coherent system. I build <strong>CRM automation</strong> for{' '}
+              <strong>HubSpot, Close CRM, GoHighLevel, and Salesforce</strong>, design{' '}
+              <strong>LinkedIn outreach automation</strong> with Unipile and Dripify, and ship{' '}
+              <strong>AI workflow automation for ecommerce</strong> — Shopify integrations, order
+              routing, and AI-powered customer-support bots. Check out my{' '}
+              <Link to="/#projects">featured projects</Link> to see real client work.
             </p>
 
             <p>
-              My passion lies in the intersection of <strong>AI</strong> and web development. I have
-              extensive experience working with Hugging Face models for text analysis, video
-              analysis, and image analysis projects. I've built <strong>AI agents</strong> for
-              transcript generation using Agno and OpenAI, and implemented Whisper models for video
-              transcription and analysis. My work includes deploying custom{' '}
-              <strong>ML models on AWS SageMaker</strong> and utilizing AWS Comprehend for advanced
-              text analysis.
+              On the AI side, I am a <strong>custom AI agent developer for startups</strong>. I
+              build production agents with <strong>OpenAI</strong>, <strong>LangChain</strong>, and{' '}
+              <strong>Agno</strong> — with tool use, memory, and multi-step reasoning — and deploy
+              custom <strong>ML models on AWS SageMaker</strong>, using{' '}
+              <strong>AWS Comprehend</strong> for sentiment / entity / key-phrase analysis and{' '}
+              <strong>AWS Textract</strong> for OCR in complex PDF data-extraction pipelines.
+            </p>
+
+            <p>
+              I am a <strong>Zapier expert for business automation</strong>, a specialist in{' '}
+              <strong>custom API integrations</strong> (webhooks, OAuth 2.0, event-driven
+              pipelines), and handle <strong>Zapier-to-n8n migrations</strong> to cut automation
+              cost for agencies. If it moves data between two systems — or needs an AI in the middle
+              — I have probably already shipped it.
             </p>
 
             <p>
