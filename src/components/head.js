@@ -187,7 +187,7 @@ const Head = ({ title, description, image }) => {
 
   const jsonLdService = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'Service',
     name: 'Hamza Bilal - Backend Development & AI Engineering Services',
     serviceType: [
       'Software Development',
@@ -196,19 +196,19 @@ const Head = ({ title, description, image }) => {
       'API Development',
     ],
     areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 0,
-        longitude: 0,
-      },
-      geoRadius: '40075000',
-      description: 'Worldwide - Remote Services Available Globally',
+      '@type': 'Place',
+      name: 'Worldwide - Remote Services Available Globally',
     },
     provider: {
       '@type': 'Person',
       name: 'Hamza Bilal',
       url: canonicalBase,
+      email: 'mailto:hamzaabialal@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'PK',
+        addressRegion: 'Pakistan',
+      },
     },
     url: canonicalBase,
     description:
