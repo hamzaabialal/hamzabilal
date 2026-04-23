@@ -56,28 +56,21 @@ const Hero = () => (
   <StyledHeroSection>
     <span className="greeting">Hi, my name is</span>
     <h1>Hamza Bilal.</h1>
-    <h2>Backend Developer & AI Engineer specializing in Scalable Systems.</h2>
+    <h2>AI Automation & Backend Engineer building scalable, AI-driven systems.</h2>
     <p>
-        I'm a <strong>Backend Developer</strong> and <strong>AI Engineer</strong> specializing in{' '}
-      <strong>Django</strong>, <strong>FastAPI</strong>, Flask, and pytest. I also build{' '}
-      <strong>custom AI agents</strong> and production ML services, deploying models on{' '}
-      <strong>AWS</strong> (SageMaker and Comprehend) and integrating them into APIs. Currently,
-        I'm focused on building scalable backend and AI-driven APIs at{' '}
-      <a
-        href="https://www.linkedin.com/in/hamza-bilal-600968245/"
-        target="_blank"
-        rel="noreferrer">
-          Distack Solutions
-      </a>
-        . <Link to="/#about">Read my background and skills</Link> or{' '}
+      I'm an <strong>AI Automation &amp; Backend Engineer</strong> with{' '}
+      <strong>3+ years on-site at Techticks</strong>, where I also hold a concurrent role as{' '}
+      <strong>Trainer, AI Automation &amp; Backend Engineering</strong>. I specialize in{' '}
+      <strong>Django</strong>, <strong>FastAPI</strong>, and{' '}
+      <strong>n8n / Make.com / Zapier</strong>, and build <strong>custom AI agents</strong>,
+      automation workflows, and production ML services — deploying models on <strong>AWS</strong> (
+      <strong>SageMaker</strong>, <strong>Comprehend</strong>, <strong>Textract</strong>) and
+      integrating them with CRMs and business tools.{' '}
+      <Link to="/#about">Read my background and skills</Link> or{' '}
       <Link to="/#projects">explore my portfolio projects</Link>.
     </p>
-    <a
-      className="email-link"
-      href="mailto:hamzaabialal@gmail.com"
-      target="_blank"
-      rel="noreferrer">
-        Get In Touch
+    <a className="email-link" href="mailto:hamzaabialal@gmail.com" target="_blank" rel="noreferrer">
+      Get In Touch
     </a>
   </StyledHeroSection>
 );

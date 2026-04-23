@@ -147,9 +147,11 @@ const About = () => {
     'Machine Learning',
     'Hugging Face',
     'OpenAI',
+    'LangChain',
     'Whisper',
     'AWS SageMaker',
     'AWS Comprehend',
+    'AWS Textract',
     'Text Analysis',
     'Video Analysis',
     'Image Analysis',
@@ -158,13 +160,29 @@ const About = () => {
     'N8n',
     'Make.com',
     'Zapier',
+    'GoHighLevel',
+    'HubSpot',
+    'Close CRM',
+    'Salesforce',
+    'Notion API',
+    'Unipile',
+    'Dripify',
+
+    // Cloud & Deployment
+    'AWS EC2',
+    'AWS Lambda',
+    'AWS S3',
+    'AWS API Gateway',
+    'Docker',
+    'CI/CD',
 
     // Full Stack & Development Tools
     'JavaScript',
+    'TypeScript',
+    'Next.js',
     'React',
     'HTML/CSS',
     'Git',
-    'Docker',
     'AI Agents',
     'Agno',
     'Apify',
@@ -261,11 +279,45 @@ const About = () => {
               signals.
             </p>
 
+            <h3>AI Automation & No-Code Ops</h3>
             <p>
-              Currently, I'm working as a Backend Developer at Distack Solutions, where I develop
-              and maintain scalable backend services using Python, Django, and Django Rest
-              Framework. I'm passionate about driving innovation through AI integration and
-              continuously improving development processes with cutting-edge technologies.
+              For the last <b>3+ years on-site at Techticks</b>, I've held two concurrent roles:{' '}
+              <b>AI Automation &amp; Backend Engineer</b> (Apr 2023 – Present) and{' '}
+              <b>Trainer, AI Automation &amp; Backend Engineering</b> (Jan 2024 – Present). As an
+              engineer I ship production workflows in <b>n8n</b>, <b>Make.com</b>, and <b>Zapier</b>{' '}
+              that replace manual operations with self-healing pipelines, connecting CRMs (
+              <b>Close CRM</b>, <b>HubSpot</b>, <b>Salesforce</b>, <b>GoHighLevel</b>), marketing
+              tools, databases, and LLMs (OpenAI, LangChain, Agno) into a single coherent system. As
+              Trainer I own the in-house curriculum — mentoring junior engineers on Python backends,
+              workflow design, LLM and agent orchestration, and AWS deployment.
+            </p>
+            <ul className="skills-list">
+              <li>End-to-end AI workflows with OpenAI + LangChain decision-making</li>
+              <li>CRM + marketing automation (Close, HubSpot, Salesforce, GoHighLevel)</li>
+              <li>Complex PDF data extraction with 100% accuracy (OCR + LLM + schemas)</li>
+              <li>Custom API and webhook integrations across the stack</li>
+              <li>Outreach at scale with Unipile and Dripify, AI-personalized</li>
+              <li>Notion-as-backend patterns for client-facing portals (e.g. Hostyo)</li>
+            </ul>
+
+            <h3>AWS Deployment & MLOps</h3>
+            <p>
+              I own deployment end-to-end on <b>AWS</b>: backend services run on EC2/ECS behind API
+              Gateway, background jobs on Lambda and SQS, artifacts and data in S3, and
+              observability through CloudWatch and structured logs. I containerize ML models with
+              Docker, push to ECR, and deploy to <b>AWS SageMaker</b> real-time endpoints for image
+              and text inference. For text understanding at scale I lean on <b>AWS Comprehend</b>{' '}
+              (sentiment, entities, key phrases, topics) and <b>AWS Textract</b> for OCR, glued
+              together by Django/FastAPI services and n8n orchestration.
+            </p>
+
+            <p>
+              Currently, I hold two concurrent roles on-site at Techticks —{' '}
+              <b>AI Automation &amp; Backend Engineer</b> and{' '}
+              <b>Trainer, AI Automation &amp; Backend Engineering</b> — building scalable backends
+              and AI-driven APIs that power real-world products, and training the next generation of
+              engineers on the same stack. I'm passionate about driving innovation through AI
+              integration and continuously improving development processes.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
