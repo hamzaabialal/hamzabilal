@@ -9,3 +9,343 @@
   for = "/resume.pdf"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# ─────────────────────────────────────────────────────────────────
+# 301 redirects — clean up indexed-but-changed URLs and reclaim
+# crawl budget that Google was burning on 404s.
+#
+# All redirects use status 301 (permanent) so search engines transfer
+# any earned ranking signal from the old URL to the new one.
+# `force = false` (default) means real existing pages still serve;
+# redirects only fire for paths that would otherwise 404.
+# ─────────────────────────────────────────────────────────────────
+
+# ── Trailing-slash normalization for the new sections ────────────
+# Gatsby canonicalizes everything to trailing slash; redirect bare
+# variants so Google never sees a 404 on `/services` (no slash).
+[[redirects]]
+  from = "/services"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/archive"
+  to = "/archive/"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap"
+  to = "/sitemap/"
+  status = 301
+
+[[redirects]]
+  from = "/pensieve"
+  to = "/pensieve/"
+  status = 301
+
+
+# ── /blog/* (legacy single post) → /pensieve/* (canonical) ──────
+# `how-to-become-backend-developer` was authored under /blog/ while
+# every other post lives under /pensieve/. Keep the old URL alive
+# (it's the only page Google might have already indexed there) by
+# pointing it at the canonical /pensieve/ slug going forward.
+[[redirects]]
+  from = "/blog"
+  to = "/pensieve/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/pensieve/"
+  status = 301
+
+# Catch-all for anything anyone may have linked under /blog/...
+# that doesn't resolve to a real page.
+[[redirects]]
+  from = "/blog/*"
+  to = "/pensieve/:splat"
+  status = 301
+  force = false
+
+
+# ── Tag URL inconsistency (lodash kebab-case quirk on "APIs") ───
+# The Pensieve tag generator emitted `/pensieve/tags/ap-is/` for the
+# tag "APIs". Some sitemaps/links may point at the cleaner version.
+[[redirects]]
+  from = "/pensieve/tags/apis/"
+  to = "/pensieve/tags/ap-is/"
+  status = 301
+
+[[redirects]]
+  from = "/pensieve/tags/api/"
+  to = "/pensieve/tags/api-development/"
+  status = 301
+
+
+# ── Common shorthand URLs visitors may guess ────────────────────
+[[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/about/"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 301
+
+[[redirects]]
+  from = "/contact/"
+  to = "/#contact"
+  status = 301
+
+[[redirects]]
+  from = "/work"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/work/"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio/"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/projects"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/projects/"
+  to = "/#projects"
+  status = 301
+
+[[redirects]]
+  from = "/experience"
+  to = "/#jobs"
+  status = 301
+
+[[redirects]]
+  from = "/experience/"
+  to = "/#jobs"
+  status = 301
+
+[[redirects]]
+  from = "/jobs"
+  to = "/#jobs"
+  status = 301
+
+[[redirects]]
+  from = "/jobs/"
+  to = "/#jobs"
+  status = 301
+
+[[redirects]]
+  from = "/hire"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/hire/"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/hire-me"
+  to = "/services/"
+  status = 301
+
+[[redirects]]
+  from = "/hire-me/"
+  to = "/services/"
+  status = 301
+
+
+# ── Service short URLs → canonical service pages ────────────────
+# In case anyone links to a shortened form, point them at the
+# real, indexed canonical service URL.
+[[redirects]]
+  from = "/ai-automation"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-automation/"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-agent"
+  to = "/services/ai-agent-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-agent/"
+  to = "/services/ai-agent-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-agents"
+  to = "/services/ai-agent-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-agents/"
+  to = "/services/ai-agent-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/n8n"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/n8n/"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/zapier"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/zapier/"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/make"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/make/"
+  to = "/services/ai-automation-services/"
+  status = 301
+
+[[redirects]]
+  from = "/django"
+  to = "/services/django-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/django/"
+  to = "/services/django-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/backend"
+  to = "/services/backend-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/backend/"
+  to = "/services/backend-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/api"
+  to = "/services/backend-development-services/"
+  status = 301
+
+[[redirects]]
+  from = "/api/"
+  to = "/services/backend-development-services/"
+  status = 301
+
+
+# ── Old upstream template demo URLs (Brittany Chiang fork) ──────
+# These were demo links in the original template that crawlers
+# may still hit if old archive/cache exists. Send them home.
+[[redirects]]
+  from = "/spotify-profile"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/spotify-profile/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/halcyon-theme"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/halcyon-theme/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/courses"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/courses/"
+  to = "/"
+  status = 301
+
+
+# ── Resume short links ──────────────────────────────────────────
+[[redirects]]
+  from = "/cv"
+  to = "/resume.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/cv/"
+  to = "/resume.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/resume"
+  to = "/resume.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/resume/"
+  to = "/resume.pdf"
+  status = 301
+
+
+# ── Sitemap & feed shorthand ───────────────────────────────────
+[[redirects]]
+  from = "/sitemap.xml/"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/feed"
+  to = "/pensieve/"
+  status = 301
+
+[[redirects]]
+  from = "/feed/"
+  to = "/pensieve/"
+  status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/pensieve/"
+  status = 301
+
+[[redirects]]
+  from = "/rss/"
+  to = "/pensieve/"
+  status = 301
