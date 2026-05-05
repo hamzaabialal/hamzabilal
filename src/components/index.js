@@ -14,6 +14,7 @@ export { default as Email } from './email';
 export { default as Footer } from './footer';
 export { default as Reveal } from './reveal';
 export { default as Hero } from './sections/hero';
+export { default as VideoIntro } from './sections/videoIntro';
 export { default as Stack } from './sections/stack';
 export { default as Metrics } from './sections/metrics';
 export { default as Testimonials } from './sections/testimonials';

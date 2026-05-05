@@ -137,6 +137,43 @@ const Head = ({ title, description, image }) => {
     },
   };
 
+  // VideoObject schema — Google Video search + AI chatbot (ChatGPT, Claude,
+  // Perplexity) discoverability of the video introduction.
+  const videoId = 'aDyulPIL-88';
+  const jsonLdVideo = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: 'Hamza Bilal — Video Introduction · AI Automation & Backend Engineer',
+    description:
+      'A short video introduction from Hamza Bilal — AI Automation Engineer, n8n / Make.com / Zapier expert, and AI Agent Developer. Trainer at Techticks with 100% Upwork Job Success. Available for hire by startups in USA, UK, Germany, and Australia.',
+    thumbnailUrl: [
+      `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+      `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+    ],
+    uploadDate: '2026-04-20',
+    duration: 'PT1M',
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    embedUrl: `https://www.youtube.com/embed/${videoId}`,
+    potentialAction: {
+      '@type': 'WatchAction',
+      target: `${canonicalBase}/#video-intro`,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Hamza Bilal',
+      url: canonicalBase,
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Hamza Bilal',
+      url: canonicalBase,
+    },
+    inLanguage: 'en',
+    isFamilyFriendly: true,
+    keywords:
+      'AI Automation Engineer, n8n developer, Make.com expert, Zapier specialist, AI Agent Developer, hire AI automation engineer, freelance n8n developer',
+  };
+
   const jsonLdPerson = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -236,7 +273,15 @@ const Head = ({ title, description, image }) => {
       'https://github.com/hamzaabialal',
       'https://www.upwork.com/freelancers/~016dcbde991464381d',
       'https://hamzabilal.dev',
+      'https://www.youtube.com/watch?v=aDyulPIL-88',
     ],
+    subjectOf: {
+      '@type': 'VideoObject',
+      name: 'Hamza Bilal — Video Introduction',
+      url: `${canonicalBase}/#video-intro`,
+      embedUrl: 'https://www.youtube.com/embed/aDyulPIL-88',
+      thumbnailUrl: 'https://img.youtube.com/vi/aDyulPIL-88/maxresdefault.jpg',
+    },
   };
 
   const jsonLdService = {
@@ -534,10 +579,46 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="google-site-verification" content="qENLeOdnrBPsfj3q82IZ7OZb089_hl1SPYvny0LrrtU" />
       <meta name="google-site-verification" content="JYfQ0qgER--rJP2XM6618-D8OO37NUhhkq2w1RS1ITI" />
+      {/* Open Graph video tags + Twitter player card — homepage only,
+          where the embedded VideoIntro section lives. Lets Facebook /
+          LinkedIn / X / Slack / Discord render an inline preview, and
+          gives AI scrapers (ChatGPT, Perplexity, Claude) a clear video
+          reference attached to this URL. */}
+      {isHomepage && (
+        <meta property="og:video" content="https://www.youtube.com/embed/aDyulPIL-88" />
+      )}
+      {isHomepage && (
+        <meta property="og:video:url" content="https://www.youtube.com/embed/aDyulPIL-88" />
+      )}
+      {isHomepage && (
+        <meta property="og:video:secure_url" content="https://www.youtube.com/embed/aDyulPIL-88" />
+      )}
+      {isHomepage && <meta property="og:video:type" content="text/html" />}
+      {isHomepage && <meta property="og:video:width" content="1280" />}
+      {isHomepage && <meta property="og:video:height" content="720" />}
+      {isHomepage && (
+        <meta
+          property="og:image"
+          content="https://img.youtube.com/vi/aDyulPIL-88/maxresdefault.jpg"
+        />
+      )}
+      {isHomepage && <meta name="twitter:card" content="player" />}
+      {isHomepage && (
+        <meta name="twitter:player" content="https://www.youtube.com/embed/aDyulPIL-88" />
+      )}
+      {isHomepage && <meta name="twitter:player:width" content="1280" />}
+      {isHomepage && <meta name="twitter:player:height" content="720" />}
+      {isHomepage && (
+        <meta
+          name="twitter:image"
+          content="https://img.youtube.com/vi/aDyulPIL-88/maxresdefault.jpg"
+        />
+      )}
       <script type="application/ld+json">{JSON.stringify(jsonLdWebsite)}</script>
       <script type="application/ld+json">{JSON.stringify(jsonLdPerson)}</script>
       {isHomepage && <script type="application/ld+json">{JSON.stringify(jsonLdService)}</script>}
       {isHomepage && <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>}
+      {isHomepage && <script type="application/ld+json">{JSON.stringify(jsonLdVideo)}</script>}
     </Helmet>
   );
 };

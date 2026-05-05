@@ -5,6 +5,7 @@ import {
   Layout,
   Reveal,
   Hero,
+  VideoIntro,
   Stack,
   Metrics,
   About,
@@ -24,6 +25,9 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <StyledMainContainer className="fillHeight">
       <Hero />
+      <Reveal>
+        <VideoIntro />
+      </Reveal>
       <Reveal>
         <Stack />
       </Reveal>
