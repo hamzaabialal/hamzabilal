@@ -579,6 +579,7 @@ const Head = ({ title, description, image }) => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="google-site-verification" content="qENLeOdnrBPsfj3q82IZ7OZb089_hl1SPYvny0LrrtU" />
       <meta name="google-site-verification" content="JYfQ0qgER--rJP2XM6618-D8OO37NUhhkq2w1RS1ITI" />
+      <meta name="google-site-verification" content="w70Bji6E7sjkXo4xrQyDHn4uESLDQ_IcNaWu0uoL7pE" />
       {/* Open Graph video tags + Twitter player card — homepage only,
           where the embedded VideoIntro section lives. Lets Facebook /
           LinkedIn / X / Slack / Discord render an inline preview, and
